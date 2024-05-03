@@ -7,5 +7,5 @@ Clonen el repositorio y cada persona debe crear su propia rama (git checkout -b 
 erley-valeta
 
 laura-quintero
-miguel-sequeira
+miguel-madronero
 jhoan-gomez
