@@ -121,4 +121,66 @@ body{
     }
     
 
+
+    /* Tarjetas del equipo */
+.container__cards__team{
+    width: 100%;
+    display: flex;
+    background-color: rgb(190, 182, 182);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.decoration__cards{
+    width: 100%;
+    height: 110%;
+    background-color: #004884;
+    position: absolute;
+    z-index: 0;
+    rotate: 15deg;
+    border-radius: 20px;
+}
+
+.container__card__one, .container__card__two, .container__card__third, .container__card__four{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20%;
+    border-radius: 20px;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.container__card__imagen{
+    box-sizing: content-box;
+    width: 30%;
+    position: absolute;
+    margin: 0;
+    top: -20%;
+}
+
+#imagenes{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 3px solid #ff9019;
+    border-radius: 50%;
+}
+
+.container__card__description{
+    z-index: 1;
+    width: 85%;
+    height: 100%;
+    font-size: 14px;
+    text-align: justify;
+    top: 20%;
+}
+
+.container__card__description h4{
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    padding-top: 20%;
 }
