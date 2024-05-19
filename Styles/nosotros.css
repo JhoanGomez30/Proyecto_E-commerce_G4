@@ -55,11 +55,7 @@ body{
    
 }
 
-.header__logo path{
-    /* color: var(--color-principal); */
-    /* fill: var(--color-principal); */
-    /* background-color: #fff; */
-}
+
 
 .header__logo--fitEmporium{
     margin-top: 2.5%;
