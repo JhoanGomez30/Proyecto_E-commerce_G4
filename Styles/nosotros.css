@@ -121,11 +121,8 @@ body{
     }
     
 
-}.logo{
-    width: 40%;
-    fill: aqua;
-}
 
+    /* Tarjetas del equipo */
 .container__cards__team{
     width: 100%;
     display: flex;
