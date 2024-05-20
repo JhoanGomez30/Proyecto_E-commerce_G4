@@ -118,28 +118,13 @@ body{
     fill: var(--color-principal);
 }
 
-/* Footer */
 
-.footer{
-    width: 100%;
-    background-color: #E6EFFD;
-}
-
-.container__footer{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 50px;
-    padding: 45px 0px;
-}
 
 @media(min-width:768px){
 
     .nav__link{
         display: block;
     }
-    
 
+    
 }
