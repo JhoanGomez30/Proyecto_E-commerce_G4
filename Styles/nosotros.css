@@ -1,4 +1,131 @@
-.container_article{
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-poppins:"Poppins", sans-serif;
+    --font-open-sans:"Open Sans", sans-serif;
+    --white:#fff;
+    --color-secondary: #3366cc;
+    --color-principal:#004884;
+
+    --padding-container: 32px 0;
+
+
+    
+}
+
+body{
+    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    background-color: var(--color-principal1);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__figure{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header__logo--fit{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__logo{
+    /* color: var(--color-principal); */
+    width: 30px;
+    height: 30px;
+    fill: var(--color-principal);
+   
+}
+
+.header__logo path{
+    /* color: var(--color-principal); */
+    /* fill: var(--color-principal); */
+    /* background-color: #fff; */
+}
+
+.header__logo--fitEmporium{
+    margin-top: 2.5%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: var(--font-poppins);
+    color: var(--color-principal);
+    
+}
+
+.header__search{
+    color: var(--color-principal);
+    fill: var(--color-principal);
+    width: 30px;
+    height: 25px;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.nav__link{
+    display: none;
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: 600;
+}
+
+.header__icons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.header__cart{
+    width: 30px;
+    height: 30px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
+
+}
+.header__cart:hover{
+    fill: grey;
+    /* color: ; */
+}
+
+.header__menu{
+    width: 30px;
+    height: 30px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
+}
+
+@media(min-width:768px){
+
+    .nav__link{
+        display: block;
+    }
+    
+
+}.container_article{
     display: flex;
     justify-content: center;
 }
