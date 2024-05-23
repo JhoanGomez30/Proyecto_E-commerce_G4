@@ -1,113 +1,510 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --font-poppins: "Poppins", sans-serif;
-  --font-open-sans: "Open Sans", sans-serif;
-  --white: #fff;
-  --color-secondary: #3366cc;
-  --color-principal: #004884;
+    --font-poppins: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --white: #fff;
+    --color-secondary: #3366cc;
+    --color-principal: #004884;
 
-  --padding-container: 32px 0;
+    --padding-container: 32px 0;
 }
 
 body {
-  font-family: var(--font-open-sans);
-  font-size: 1rem;
-  background-color: var(--color-principal1);
+    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    background-color: var(--color-principal1);
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 24px 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px 0;
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header__figure {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .header__logo--fit {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .header__logo {
-  /* color: var(--color-principal); */
-  width: 30px;
-  height: 30px;
-  fill: var(--color-principal);
+    /* color: var(--color-principal); */
+    width: 30px;
+    height: 30px;
+    fill: var(--color-principal);
 }
 
 .header__logo--fitEmporium {
-  margin-top: 2.5%;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  font-family: var(--font-poppins);
-  color: var(--color-principal);
+    margin-top: 2.5%;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: var(--font-poppins);
+    color: var(--color-principal);
 }
 
 .header__search {
-  color: var(--color-principal);
-  fill: var(--color-principal);
-  width: 30px;
-  height: 25px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
+    width: 30px;
+    height: 25px;
 }
 
 .header__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   gap: 20px;
 }
 
 .nav__link {
-  display: none;
-  text-decoration: none;
-  color: var(--color-principal);
-  font-weight: 600;
+    display: none;
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: 600;
 }
 
 .header__icons {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
 }
 
 .header__cart {
-  width: 30px;
-  height: 30px;
-  color: var(--color-principal);
-  fill: var(--color-principal);
+    width: 30px;
+    height: 30px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
 }
+
 .header__cart:hover {
-  fill: grey;
-  /* color: ; */
+    fill: grey;
+    /* color: ; */
 }
 
 .header__menu {
-  width: 30px;
-  height: 30px;
-  color: var(--color-principal);
-  fill: var(--color-principal);
+    width: 30px;
+    height: 30px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
 }
 
-@media (min-width: 768px) {
-  .nav__link {
+
+.main__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+
+}
+
+/*Erley trabajo en el boton*/
+.main__content {
+    margin-bottom: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/*Erley trabajo en el boton*/
+
+.main__title {
+    font-size: .9rem;
+    color: hsl(0, 0%, 50%);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+
+}
+
+.main__subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+
+}
+
+.main__underlined {
+    color: var(--color-principal);
+}
+
+.main__paragraph {
+    margin-bottom: 24px;
+
+}
+
+/*Erley hizo cambios ininio*/
+.main__button {
     display: block;
-  }
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--color-principal);
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-weight: 600;
+    width: fit-content;
+    text-align: center;
+}
+/*Erley hizo cambios fin*/
+
+.main__figure {
+    width: 100%;
+}
+
+.main__img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+
+}
+
+/* inicio estilos propuesta de valor */
+
+.proposal__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+.proposal__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.proposal__subtitle{
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.proposal__underlined{
+    color: var(--color-principal);
+}
+
+.proposal__paragraph{
+    margin-bottom: 24px;
+}
+
+.proposal__figure{
+    width: 100%;
+}
+
+.proposal__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+/* fin estilos propuesta de valor */
+
+/* inicio estilos misión */
+
+.missionVision{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.mission__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+.mission__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.mission__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.mission__underlined{
+    color: var(--color-principal);
+}
+
+.mission__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos misión */
+
+/* inicio estilos visión */
+
+.vision__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+.vision__content{
+    text-align: center;
+}
+
+.vision__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.vision__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.vision__underlined{
+    color: var(--color-principal);
+}
+
+.vision__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos visión */
+
+/* inicio estilos valores */
+
+.values__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.values__content{
+    text-align: center;
+}
+
+.values__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.values__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.values__underlined{
+    color: var(--color-principal);
+}
+
+.values__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos valores */
+
+@media(min-width:768px) {
+
+    .nav__link {
+        display: block;
+    }
+
+    .main__subtitle {
+        margin-bottom: 9%;
+
+    }
+
+    .main__container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        gap: 16px;
+
+    }
+
+    .main__content {
+
+        text-align: left;
+        align-items: flex-start;
+
+    }
+    .main__paragraph{
+        margin-bottom: 9%;
+        font-size: 1.1rem;
+    }
+
+    /* inicio estilos propuesta de valor */
+
+    .proposal__container{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .proposal__content{
+        text-align: left;
+        width: 50%;
+    }
+
+    .proposal__figure{
+        width: 50%;
+    }
+
+    /* fin estilos propuesta de valor */
+
+    /* inicio estilos misión */
+
+    .missionVision{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mission__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .mission__content{
+        text-align: left;
+    }
+
+    /* fin estilos misión */
+
+    /* inicio estilos visión */
+
+    .vision__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .vision__content{
+        text-align: left;
+    }
+
+    /* fin estilos visión */
+
+    /* inicio estilos valores */
+
+    .values__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values__content{
+        text-align: left;
+        padding: 1.5%;
+    }
+
+    /* fin estilos valores */
+}
+
+/*trabajo de Erley para hero inicio*/
+@media(min-width:1024px){
+
+    .main__paragraph{
+        margin-bottom: 4%;
+        font-size: 1.2rem;
+    }
+
+    .main__subtitle{
+        margin-bottom: 4%;
+        font-size: 1.7rem;
+    }
+
+    .main__button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    /* inicio estilos propuesta de valor */
+    .proposal__figure{
+        width: 50%;
+    }
+
+    .proposal__img {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    }
+    /* fin estilos propuesta de valor */
+
+}
+
+@media(min-width:1440px){
+    .main__subtitle{
+        font-size: 3rem;
+        margin-bottom: 6%;
+
+    }
+    
+    .main__paragraph{
+        margin-bottom: 6%;
+        font-size: 1.6rem;
+    }
+    .main__button {
+     padding: 15px 30px;
+     font-size: 1.6rem;
+    }
+    .main__figure {
+        width: 100%;
+        height: 100%;
+    }
+    .main__img {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    
+
+/*trabajo de Erley para hero inicio*/
+
+    /* inicio estilos propuesta de valor */
+    .proposal__figure{
+        width: 50%;
+    }
+
+    .proposal__img {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    }
+    /* fin estilos propuesta de valor */
 }
