@@ -180,6 +180,161 @@ body {
 
 }
 
+/* inicio estilos propuesta de valor */
+
+.proposal__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+.proposal__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.proposal__subtitle{
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.proposal__underlined{
+    color: var(--color-principal);
+}
+
+.proposal__paragraph{
+    margin-bottom: 24px;
+}
+
+.proposal__figure{
+    width: 100%;
+}
+
+.proposal__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+/* fin estilos propuesta de valor */
+
+/* inicio estilos misión */
+
+.missionVision{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.mission__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+.mission__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.mission__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.mission__underlined{
+    color: var(--color-principal);
+}
+
+.mission__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos misión */
+
+/* inicio estilos visión */
+
+.vision__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+
+.vision__content{
+    text-align: center;
+}
+
+.vision__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.vision__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.vision__underlined{
+    color: var(--color-principal);
+}
+
+.vision__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos visión */
+
+/* inicio estilos valores */
+
+.values__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.values__content{
+    text-align: center;
+}
+
+.values__title {
+    font-size: .9rem;
+    color: var(--color-principal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.values__subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    font-family: var(--font-poppins);
+    font-weight: 700;
+}
+
+.values__underlined{
+    color: var(--color-principal);
+}
+
+.values__paragraph{
+    margin-bottom: 24px;
+}
+
+/* fin estilos valores */
+
 @media(min-width:768px) {
 
     .nav__link {
@@ -209,72 +364,74 @@ body {
         font-size: 1.1rem;
     }
 
-}
+    /* inicio estilos propuesta de valor */
 
-/* Tarjetas del equipo */
-.container__cards__team {
-    width: 100%;
-    display: flex;
-    background-color: rgb(190, 182, 182);
-    justify-content: center;
-    flex-direction: column;
-}
+    .proposal__container{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 
-.decoration__cards {
-    width: 100%;
-    height: 110%;
-    background-color: #004884;
-    position: absolute;
-    z-index: 0;
-    rotate: 15deg;
-    border-radius: 20px;
-}
+    .proposal__content{
+        text-align: left;
+        width: 50%;
+    }
 
-.container__card__one,
-.container__card__two,
-.container__card__third,
-.container__card__four {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20%;
-    border-radius: 20px;
-    position: relative;
-    color: rgb(255, 255, 255);
-}
+    .proposal__figure{
+        width: 50%;
+    }
 
-.container__card__imagen {
-    box-sizing: content-box;
-    width: 30%;
-    position: absolute;
-    margin: 0;
-    top: -20%;
-}
+    /* fin estilos propuesta de valor */
 
-#imagenes {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border: 3px solid #ff9019;
-    border-radius: 50%;
-}
+    /* inicio estilos misión */
 
-.container__card__description {
-    z-index: 1;
-    width: 85%;
-    height: 100%;
-    font-size: 14px;
-    text-align: justify;
-    top: 20%;
-}
+    .missionVision{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.container__card__description h4 {
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    padding-top: 20%;
+    .mission__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .mission__content{
+        text-align: left;
+    }
+
+    /* fin estilos misión */
+
+    /* inicio estilos visión */
+
+    .vision__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .vision__content{
+        text-align: left;
+    }
+
+    /* fin estilos visión */
+
+    /* inicio estilos valores */
+
+    .values__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values__content{
+        text-align: left;
+        padding: 1.5%;
+    }
+
+    /* fin estilos valores */
 }
 
 /*trabajo de Erley para hero inicio*/
@@ -294,6 +451,18 @@ body {
         padding: 10px 20px;
         font-size: 1.2rem;
     }
+
+    /* inicio estilos propuesta de valor */
+    .proposal__figure{
+        width: 50%;
+    }
+
+    .proposal__img {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    }
+    /* fin estilos propuesta de valor */
 
 }
 
@@ -324,5 +493,18 @@ body {
         object-fit: cover;
     }
     
-    }
+
 /*trabajo de Erley para hero inicio*/
+
+    /* inicio estilos propuesta de valor */
+    .proposal__figure{
+        width: 50%;
+    }
+
+    .proposal__img {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    }
+    /* fin estilos propuesta de valor */
+}
