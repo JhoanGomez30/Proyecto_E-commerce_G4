@@ -398,58 +398,125 @@ body {
 
 .card {
     text-align: center;
-    margin: 150px auto;
+    margin-bottom: 10%;
 }
 
 .card__container {
+    
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 30% 5%;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-
+    gap: 100px 20px;
+    width: 100%;
 }
 
 .card__member {
-    width: 289px;
-    height: auto;
-    padding: 0;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.card__member .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     border-radius: 20px;
+    border-top: 10px solid var(--color-principal);
+    transition: 0.6s;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+}
+
+.card__member .front {
+    transform: rotateY(0deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__member .back{
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.card__member:hover .front {
+    transform: rotateY(-180deg);
+    
+}
+
+.card__member:hover .back {
+    transform: rotateY(0deg);
 }
 
 .line__decoration {
     width: 100%;
-    height: 10px;
-    background-color: var(--color-principal);
+    height: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.img__member {
+.img__member{
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    display: inline-block;
-    position: absolute;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    
 }
 
 .card__text {
-    padding: 45px 20px 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    justify-content: space-around;
 }
 
-.card__name {
-    padding: 20px;
-}
-
-.card__position{
+.card__position {
     color: var(--color-grey);
+    font-weight: bold;
+}
+
+.face .txt__back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.back .info__like{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.back .portafolio__icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.back .back__portafolio{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.back__links {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-quinary);
 }
 
 /* Fin seccion card equipo */
@@ -691,7 +758,8 @@ body {
     /* Inicio estilos cards */
     .card {
         text-align: center;
-        margin: 100px auto;
+        margin: 0 auto;
+        margin-bottom: 10%;
         width: 80%;
     }
     .card__container {
@@ -770,10 +838,10 @@ body {
 
     /* Inicio estilos cards Miguel Angel */
  
-    .card__container {
-        gap: 30% 1%;
+    /* .card__container {
+        gap: 50px 20px;
         
-    }
+    } */
 
     /* fin estilos cards Miguel angel*/
 
@@ -823,10 +891,9 @@ body {
 
        /* Inicio estilos cards Miguel Angel */
  
-       .card__container {
-        gap: 30% 0%;
-        
-    }
+    .card{
+        gap: 200px;
+    }  
 
     /* fin estilos cards Miguel angel*/
 }
