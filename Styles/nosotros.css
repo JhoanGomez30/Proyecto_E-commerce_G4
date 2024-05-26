@@ -475,6 +475,10 @@ body {
     margin: 16px 0 50px;
 }
 
+.footer__paragraph-newsletter{
+    margin: 15px 0;
+}
+
 .footer__form{
     display: flex;
     flex-wrap: wrap;
@@ -536,13 +540,13 @@ body {
     line-height: 50px;
 }
 .footer__contact::after{
-    content:'Phone: +1-543-123-4567';
+    content:'Phone: +57-313-761-3879';
     margin-left: 10px;
     
 }
 
 .footer__contact--email::after{
-    content: 'example@huddle.com';
+    content: 'conctactanos@fitemporium.com';
    
 }
 
@@ -715,6 +719,9 @@ body {
     }
     .footer__paragraph{
         margin: 0;
+    }
+    .footer__paragraph-newsletter{
+        margin: 15px 0;
     }
 
     /* Fin footer miguel angel */
