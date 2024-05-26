@@ -10,6 +10,7 @@
     --white: #fff;
     --color-secondary: #3366cc;
     --color-principal: #004884;
+    --color-grey:hsl(0, 0%, 50%);
 
     --padding-container: 48px 0;
 }
@@ -237,6 +238,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     text-align: center;
+    padding: 0;
 }
 
 .mission__title {
@@ -269,6 +271,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
+    padding: 0;
 }
 
 .vision__content{
@@ -307,6 +310,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 0;
 }
 
 .values__content{
@@ -433,6 +437,10 @@ body {
 
 .card__name {
     padding: 20px;
+}
+
+.card__position{
+    color: var(--color-grey);
 }
 
 /* Fin seccion card equipo */
