@@ -11,7 +11,7 @@
     --color-secondary: #3366cc;
     --color-principal: #004884;
 
-    --padding-container: 32px 0;
+    --padding-container: 48px 0;
 }
 
 body {
@@ -23,13 +23,14 @@ body {
 .container {
     width: 90%;
     margin: 0 auto;
-    padding: 24px 0;
+    padding: var(--padding-container);
 }
 
 .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 24px 0;
 }
 
 .header__figure {
@@ -112,6 +113,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
+    padding: 24px 0 48px;
 
 }
 
@@ -383,14 +385,17 @@ body {
 
 .card {
     text-align: center;
+    margin: 150px auto;
 }
 
 .card__container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 15%;
+    gap: 30% 5%;
     align-items: center;
     justify-content: center;
+    width: 80%;
+
 }
 
 .card__member {
@@ -539,6 +544,11 @@ body {
 
 
     /* Inicio estilos cards */
+    .card {
+        text-align: center;
+        margin: 100px auto;
+        width: 80%;
+    }
     .card__container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -587,6 +597,15 @@ body {
 
     /*Fin mq 1024px Banner miguel angel*/
 
+    /* Inicio estilos cards Miguel Angel */
+ 
+    .card__container {
+        gap: 30% 1%;
+        
+    }
+
+    /* fin estilos cards Miguel angel*/
+
 }
 
 @media(min-width:1440px){
@@ -630,4 +649,13 @@ body {
     object-fit: cover;
     }
     /* fin estilos propuesta de valor */
+
+       /* Inicio estilos cards Miguel Angel */
+ 
+       .card__container {
+        gap: 30% 0%;
+        
+    }
+
+    /* fin estilos cards Miguel angel*/
 }
