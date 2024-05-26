@@ -10,6 +10,16 @@
     --white: #fff;
     --color-secondary: #3366cc;
     --color-principal: #004884;
+    --color-grey:hsl(0, 0%, 50%);
+
+    --color-tertiary:#E6EFFD;
+    --color-quaternary:#FF9019;
+    --color-quinary:#7F00B2;
+    --color-senary:#D0A3E1;
+    --color-novenary:#A833B9;
+
+
+
 
     --padding-container: 48px 0;
 }
@@ -237,6 +247,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     text-align: center;
+    padding: 0;
 }
 
 .mission__title {
@@ -269,6 +280,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
+    padding: 0;
 }
 
 .vision__content{
@@ -307,6 +319,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 0;
 }
 
 .values__content{
@@ -435,7 +448,139 @@ body {
     padding: 20px;
 }
 
+.card__position{
+    color: var(--color-grey);
+}
+
 /* Fin seccion card equipo */
+
+
+/* Inicio Footer Miguel Angel */
+
+    
+.footer{
+    color: #fff;
+    background-color: var(--color-principal);
+}
+
+.footer__title{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family:var(--font-poppins) ;
+}
+
+.footer__paragraph{
+    line-height: 1.5;
+    margin: 16px 0 50px;
+}
+
+.footer__paragraph-newsletter{
+    margin: 15px 0;
+}
+
+.footer__form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.footer__input{
+    flex-basis: 100%;
+    flex-grow: 1;
+    font-size: 16px;
+    font-family: var(--font-open-sans);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 16px 6px;
+    margin-bottom: 20px;
+}
+
+.footer__cta{
+    font-size: 16px;
+    font-family: var(--font-open-sans);
+    background-color: var(--color-novenary);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 40px ;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.footer__cta:hover{
+    cursor: pointer;
+}
+.footer__figureLogo{
+    display: flex;
+    
+    justify-content: flex-start;
+    width: 90%;
+    margin-right:0 auto ;
+
+    /* width: fit-content; */
+    height: fit-content;
+    background-color: var(--color-principal);
+}
+.footer__logo{
+    /* display: block; */
+    width: 300px;
+    height:60px;
+    background-color: var(--color-principal);
+}
+
+.footer__logo path{
+    fill: var(--white);
+}
+
+
+.footer__contact{
+    line-height: 50px;
+}
+.footer__contact::after{
+    content:'Phone: +57-313-761-3879';
+    margin-left: 10px;
+    
+}
+
+.footer__contact--email::after{
+    content: 'conctactanos@fitemporium.com';
+   
+}
+
+.footer__social{
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 30px ;
+    gap: 16px;
+}
+
+.footer__link{
+    text-decoration: none;
+    width: 40px;
+    border: 1px solid var(--white);
+    border-radius: 100%;
+    padding: 6px;
+    transition: all .3s ease-in-out;
+}
+
+.footer__icon{
+    width: 100%; /* DEBES COLOCAR EL WIDTH AL CIEN POR CIENTO PARA PODER MODIFICARLE EL TAMAÑO EN PIXELES*/
+    display: block;
+    fill: var(--white);
+}
+
+.footer__icon:hover{
+    fill: var(--color-quaternary);
+}
+
+
+
+
+
+/* Fin Footer Miguel Angel */
 
 
 @media(min-width:768px) {
@@ -554,6 +699,32 @@ body {
     }
 
     /* fin estilos cards */
+
+    /* Inicio footer miguel angel */
+
+    .footer__container{
+        --padding-container:32px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer__newsletter{
+        width: 50%;
+        max-width: 350px;
+        order: 1;
+    }
+    .footer__content{
+        width: 50%;
+        max-width: 300px;
+
+    }
+    .footer__paragraph{
+        margin: 0;
+    }
+    .footer__paragraph-newsletter{
+        margin: 15px 0;
+    }
+
+    /* Fin footer miguel angel */
 }
 
 /*trabajo de Erley para hero inicio*/
