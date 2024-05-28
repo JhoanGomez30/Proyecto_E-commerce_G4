@@ -62,6 +62,15 @@ body {
     fill: var(--color-principal);
 }
 
+.header__logo--complete{
+    width: 160px;
+    height: 30px;
+}
+
+.header__logo--complete path{
+    fill: var(--color-principal);
+}
+
 .header__logo--fitEmporium {
     margin-top: 2.5%;
     font-size: 1.1rem;
