@@ -108,6 +108,14 @@ body {
     gap: 12px;
 }
 
+.header__userIcon{
+    width: 27px;
+    height: 27px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
+    display: none;
+}
+
 .header__cart {
     width: 30px;
     height: 30px;
@@ -672,6 +680,11 @@ body {
 
 
 /* Fin Footer Miguel Angel */
+@media(min-width:375px){
+    .header__userIcon{
+      display: block;
+    }
+}
 
 
 @media(min-width:768px) {
