@@ -224,13 +224,14 @@
           </div>
           <!-- Fin contacto texto -->
           <!-- Inicio contacto formulario -->
-          <form class="contact__form">
+          <form class="contact__form" id="formulario">
             <div class="form__container">
               <!-- Inicio input nombre -->
               <div class="contact__group">
                 <input
                   type="text"
                   id="name"
+                  name="name__input"
                   class="contact__input"
                   placeholder=" "
                 />
@@ -282,7 +283,7 @@
                 <span class="contact__line"></span>
               </div>
               <!-- Inicio botón -->
-              <input type="submit" class="contact__submit" value="Enviar" />
+              <input type="submit" id="btn__send" class="contact__submit" value="Enviar" />
               <!-- Fin botón -->
             </div>
           </form>
@@ -300,5 +301,7 @@
       </div>
     </main>
     <!-- Fin contacto -->
+
+    <script src="../app.js" type="module"></script>
   </body>
 </html>
