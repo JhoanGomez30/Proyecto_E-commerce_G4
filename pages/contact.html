@@ -224,15 +224,17 @@
           </div>
           <!-- Fin contacto texto -->
           <!-- Inicio contacto formulario -->
-          <form class="contact__form">
-            <div class="form__container">
+          <div  class="contact__form">
+            <form action="https://formspree.io/f/mzbnqwwj" method="POST" class="form__container">
               <!-- Inicio input nombre -->
               <div class="contact__group">
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   class="contact__input"
                   placeholder=" "
+                  required
                 />
                 <label for="name" class="contact__label"
                   >Ingresa tu nombre</label
@@ -245,8 +247,10 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="contact__input"
                   placeholder=" "
+                  required
                 />
                 <label for="email" class="contact__label"
                   >Ingresa tu correo electrónico</label
@@ -259,8 +263,10 @@
                 <input
                   type="tel"
                   id="tel"
+                  name="tel"
                   class="contact__input"
                   placeholder=" "
+                  required
                 />
                 <label for="tel" class="contact__label"
                   >Ingresa tu teléfono</label
@@ -273,8 +279,10 @@
                 <input
                   type="text"
                   id="message"
+                  name="message"
                   class="contact__input"
                   placeholder=" "
+                  required
                 />
                 <label for="message" class="contact__label"
                   >Déjanos tu mensaje</label
@@ -284,8 +292,8 @@
               <!-- Inicio botón -->
               <input type="submit" class="contact__submit" value="Enviar" />
               <!-- Fin botón -->
-            </div>
-          </form>
+            </form>
+          </div>
           <!-- Fin contacto formulario -->
         </div>
         <!-- Inicio imagen -->
@@ -300,5 +308,6 @@
       </div>
     </main>
     <!-- Fin contacto -->
+
   </body>
 </html>
