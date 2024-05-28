@@ -350,6 +350,21 @@ body {
 
 /* fin estilos valores */
 
+/* Erley trabajo en img values*/
+.proposal__values{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.values__img {
+    width: 40%;
+    
+    
+
+}
+
 
  /*Inicio Banner Miguel-angel*/
 

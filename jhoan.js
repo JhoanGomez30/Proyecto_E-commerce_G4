@@ -1,8 +1,6 @@
 
 const expresiones = {
-    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    password: /^.{4,12}$/, // 4 a 12 digitos.
+    nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
@@ -15,22 +13,29 @@ const inputPhone = document.getElementById("tel");
 const inputMessage = document.getElementById("message");
 const btnSend = document.getElementById("btn__send")
 
-const validarDatos = (e) => {
-    console.log("hola")
+const validarDatos = () => {
+
+    if(!expresiones.nombre.test(inputName.value)){
+        alert("el campo de nombre no cumple con las condiciones")
+    }
+
+    if(!expresiones.correo.test(inputEmail.value)){
+        alert("el campo de email no cumple con las condiciones")
+    }
+
+    if(!expresiones.telefono.test(inputPhone.value)){
+        alert("el campo de telefono no cumple con las condiciones")
+    }
 }
 
 
 
 btnSend.addEventListener('click', (e) => {
     
-    e.preventDefault()
-    
     if(inputName.value === "" || inputEmail.value === "" || inputPhone.value === "" || inputMessage.value === ""){
         alert("Error, campos vacios")
     }else {
-        inputs.forEach((input) =>{
-            validarDatos();
-        })
+        validarDatos()
     }
 
 })
