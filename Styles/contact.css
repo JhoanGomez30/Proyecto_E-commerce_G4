@@ -114,12 +114,13 @@ body {
   width: 100%;
   text-align: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .contact__submit:hover{
-    background-color: white;
-    color: var(--color-principal);
-    border-color: var(--color-principal);
+    background-color:var(--color-secondary) ;
+    color: var(--white);
+    border-color: var(--color-secondary);
 }
 
 .contact__line {
@@ -148,6 +149,7 @@ body {
   width: 100%;
   border-radius: 10px;
 }
+
 /* Fin estilos imagen - Mobile */
 /* Fin estilos contacto - Mobile */
 
