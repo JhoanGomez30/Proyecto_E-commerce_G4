@@ -62,15 +62,6 @@ body {
     fill: var(--color-principal);
 }
 
-.header__logo--complete{
-    width: 160px;
-    height: 30px;
-}
-
-.header__logo--complete path{
-    fill: var(--color-principal);
-}
-
 .header__logo--fitEmporium {
     margin-top: 2.5%;
     font-size: 1.1rem;
@@ -107,6 +98,14 @@ body {
     width: 100%;
     gap: 12px;
 }
+
+.header__userIcon{
+    width: 27px;
+    height: 27px;
+    color: var(--color-principal);
+    fill: var(--color-principal);
+}
+
 
 .header__cart {
     width: 30px;
@@ -385,7 +384,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/img/pexels-mastercowley-1300526.webp');
+    background-image: url('../assets/img/pexels-mastercowley-1300526.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
