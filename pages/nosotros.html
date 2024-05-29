@@ -36,10 +36,13 @@
       </figure>
       <!-- incio productos nosotros contacto -->
       <nav class="header__nav">
-        <a href="https://www.youtube.com/watch?v=_WJdsklHSkA" class="nav__link">Inicio</a>
-        <a href="https://www.youtube.com/watch?v=_WJdsklHSkA" class="nav__link">Productos</a>
-        <a href="nosotros.html" class="nav__link" >Nosotros</a>
-        <a href="contact.html" class="nav__link">Contacto</a>
+          <div class="nav__links" id="nav__selected">
+            <svg id="nav__close" class="header__closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+            <a href="https://www.youtube.com/watch?v=_WJdsklHSkA" class="nav__link">Inicio</a>
+            <a href="https://www.youtube.com/watch?v=_WJdsklHSkA" class="nav__link">Productos</a>
+            <a href="nosotros.html" class="nav__link" >Nosotros</a>
+            <a href="contact.html" class="nav__link">Contacto</a>
+        </div>
         <figure class="header__icons">
           <svg class="header__userIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
           <svg class="header__cart" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -48,9 +51,9 @@
               d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
           </svg>
 
-          <svg class="header__menu" width="30" height="48" viewBox="0 0 71 48" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H72V40H0V48ZM0 28H72V20H0V28ZM0 0V8H72V0H0Z" />
+          <svg id="nav__open" class="header__menu" width="30" height="48" viewBox="0 0 71 48" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 48H72V40H0V48ZM0 28H72V20H0V28ZM0 0V8H72V0H0Z" />
           </svg>
 
         </figure>
@@ -441,6 +444,8 @@
   </footer>
 
   <!-- Fin Footer Miguel Angel -->
+
+  <script src="../js/nav.js"></script>
   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
