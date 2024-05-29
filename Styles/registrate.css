@@ -62,6 +62,15 @@ body {
     fill: var(--color-principal);
 }
 
+.header__logo--complete{
+    width: 160px;
+    height: 30px;
+}
+
+.header__logo--complete path{
+    fill: var(--color-principal);
+}
+
 .header__logo--fitEmporium {
     margin-top: 2.5%;
     font-size: 1.1rem;
@@ -104,8 +113,8 @@ body {
     height: 27px;
     color: var(--color-principal);
     fill: var(--color-principal);
+    display: none;
 }
-
 
 .header__cart {
     width: 30px;
@@ -671,6 +680,11 @@ body {
 
 
 /* Fin Footer Miguel Angel */
+@media(min-width:375px){
+    .header__userIcon{
+      display: block;
+    }
+}
 
 
 @media(min-width:768px) {
