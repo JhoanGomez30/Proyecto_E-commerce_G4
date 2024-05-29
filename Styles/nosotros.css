@@ -86,16 +86,55 @@ body {
     height: 25px;
 }
 
+
+
 .header__nav {
     display: flex;
     align-items: center;
     justify-content: center;
 
-  gap: 20px;
+    gap: 16px;
 }
 
+.nav__links{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed ;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--white);
+    /* padding: 5rem 3rem 3rem; */
+    z-index: 2;
+    gap: 70px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
+    font-size: 1.4rem;
+}
+
+
+
+.nav__links--mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__closeIcon{
+    width: 40px;
+    height: 40px;
+    fill:var(--color-principal);
+    color: var(--color-principal);
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .nav__link {
-    display: none;
+    display: block;
     text-decoration: none;
     color: var(--color-principal);
     font-weight: 600;
@@ -114,6 +153,7 @@ body {
     color: var(--color-principal);
     fill: var(--color-principal);
     display: none;
+    cursor: pointer;
 }
 
 .header__cart {
@@ -121,18 +161,17 @@ body {
     height: 30px;
     color: var(--color-principal);
     fill: var(--color-principal);
+    cursor: pointer;
 }
 
-.header__cart:hover {
-    fill: grey;
-    /* color: ; */
-}
+
 
 .header__menu {
     width: 30px;
     height: 30px;
     color: var(--color-principal);
     fill: var(--color-principal);
+    cursor: pointer;
 }
 
 
@@ -680,18 +719,84 @@ body {
 
 
 /* Fin Footer Miguel Angel */
+
+
+
+
 @media(min-width:375px){
     .header__userIcon{
       display: block;
     }
 }
 
+/*Inicio mediaqueries menu desplegable*/
+
+@media(min-width:425px){
+    .nav__links{
+        
+       
+        width: 60%;
+       
+    }
+    
+
+}
+
+@media(min-width:550px){
+    .nav__links{
+        
+       
+        width: 50%;
+       
+    }
+
+
+}
+
+@media(min-width:700px){
+    .nav__links{
+        
+       
+        width: 40%;
+       
+    }
+
+}
+
 
 @media(min-width:768px) {
+
+    .nav__links{
+        opacity: 1;
+        visibility: visible;
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+        box-shadow: inherit;
+        width: inherit;
+        font-size: inherit;
+
+
+    }
+
+    .header__closeIcon{
+        display: none;
+    }
 
     .nav__link {
         display: block;
     }
+    /*Fin mediaqueries menu desplegable*/
+    
+    .header__menu{
+        display: none;
+    }
+
+
 
     .main__subtitle {
         margin-bottom: 9%;
