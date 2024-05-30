@@ -165,6 +165,10 @@ body {
 }
 
 
+.header__menu--container{
+    width: 30px;
+    height: 30px;
+}
 
 .header__menu {
     width: 30px;
@@ -792,6 +796,9 @@ body {
     }
     /*Fin mediaqueries menu desplegable*/
     
+    .header__menu--container{
+        display: none;
+    }
     .header__menu{
         display: none;
     }
