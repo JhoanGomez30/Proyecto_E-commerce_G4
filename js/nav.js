@@ -1,13 +1,25 @@
-const nav = document.querySelector('#nav__selected');
+const nav = document.querySelector('.nav__links');
 const botonAbrir = document.querySelector('#nav__open');
+const botonAbrirMenu = document.querySelector('.header__menu--container')
 const botonCerrar = document.querySelector('#nav__close');
 
-botonAbrir.addEventListener("click",()=>{
+
+botonAbrirMenu.addEventListener("click", ()=>{
     nav.classList.add('nav__links--mostrar');
-} )
+   
+});
+
+
 
 botonCerrar.addEventListener("click", ()=>{
     nav.classList.remove("nav__links--mostrar");
+
+    nav.classList.add("nav__links--close");
+
+    setTimeout(() => {
+     nav.classList.remove("nav__links--close");
+    }, 500);
+    
 })
 
 document.addEventListener("click", function(event) {
@@ -16,3 +28,5 @@ document.addEventListener("click", function(event) {
         nav.classList.remove("nav__links--mostrar");
     }
 })
+
+

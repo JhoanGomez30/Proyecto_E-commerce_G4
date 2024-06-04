@@ -73,34 +73,35 @@
           <form action="https://formspree.io/f/mzbnqwwj" method="POST" class="form__container" id="formulario">
             <!-- Inicio input nombre -->
             <div class="contact__group">
-              <input type="text" id="name" name="name__input" class="contact__input" placeholder=" " required />
+              <input type="text" id="name" name="name" class="contact__input" placeholder=" " required />
               <label for="name" class="contact__label">Ingresa tu nombre</label>
-              <span class="contact__line"></span>
-            </div>
-            <!-- Fin input nombre -->
-            <!-- Inicio input email -->
-            <div class="contact__group">
+              <span class="contact__line" id="name__group"></span>
+          </div>
+          <!-- Fin input nombre -->
+          <!-- Inicio input email -->
+          <div class="contact__group">
               <input type="email" id="email" name="email" class="contact__input" placeholder=" " required />
               <label for="email" class="contact__label">Ingresa tu correo electrónico</label>
-              <span class="contact__line"></span>
-            </div>
-            <!-- Fin input email -->
-            <!-- Inicio input teléfono -->
-            <div class="contact__group">
+              <span class="contact__line" id="email__group"></span>
+          </div>
+          <!-- Fin input email -->
+          <!-- Inicio input teléfono -->
+          <div class="contact__group">
               <input type="tel" id="tel" name="tel" class="contact__input" placeholder=" " required />
               <label for="tel" class="contact__label">Ingresa tu teléfono</label>
-              <span class="contact__line"></span>
-            </div>
-            <!-- Fin input teléfono -->
-            <!-- Inicio input mensaje -->
-            <div class="contact__group">
-              <input type="text" id="message" name="message" class="contact__input" placeholder=" " required />
+              <span class="contact__line" id="tel__group"></span>
+          </div>
+          <!-- Fin input teléfono -->
+          <!-- Inicio input mensaje -->
+          <div class="contact__group">
+              <input type="text" id="message" name="message" class="contact__input" placeholder=" "
+                  required />
               <label for="message" class="contact__label">Déjanos tu mensaje</label>
-              <span class="contact__line"></span>
-            </div>
-            <!-- Inicio botón -->
-            <input type="submit" name="btn__send" id="btn__send" class="contact__submit" value="Enviar" />
-            <!-- Fin botón -->
+              <span class="contact__line" id="message__group"></span>
+          </div>
+          <!-- Inicio botón -->
+          <input type="submit" name="btn__send" id="btn__send" class="contact__submit" value="Enviar" disabled="true"/>
+          <!-- Fin botón -->
           </form>
         </div>
         <!-- Fin contacto formulario -->
@@ -113,7 +114,6 @@
     </div>
   </main>
   <!-- Fin contacto -->
-
   <script src="../js/app.js"></script>
 </body>
 
