@@ -15,8 +15,6 @@ function addProducts(id, name, price, category, img, description, stock, qualifi
         qualification: qualification
     }
     );
-
-    console.log(objProductsClothes)
 }
 
 addProducts(1, "Camiseta Deportiva", 19.99, "Camisetas", "img/camiseta1.jpg", "Camiseta de material transpirable para entrenamientos intensos.", 50, 4.5);
@@ -29,3 +27,19 @@ addProducts(7, "Calcetines Antideslizantes", 9.99, "Calcetines", "img/calcetines
 addProducts(8, "Chaqueta Deportiva", 59.99, "Chaquetas", "img/chaqueta1.jpg", "Chaqueta ligera y resistente al agua para correr al aire libre.", 20, 4.7);
 addProducts(9, "Bandas de Resistencia", 19.99, "Accesorios", "img/bandas1.jpg", "Bandas elásticas para ejercicios de resistencia y rehabilitación.", 70, 4.5);
 addProducts(10, "Mallas Deportivas", 39.99, "Mallas", "img/mallas1.jpg", "Mallas con tecnología de compresión para mejorar el rendimiento.", 35, 4.8);
+
+//console.log(objProductsClothes);
+
+
+function guardarLocalStorage(){
+    localStorage.setItem("prueba", JSON.stringify(objProductsClothes[6]))
+}
+
+guardarLocalStorage();
+
+let variable = JSON.parse(localStorage.getItem("prueba"))
+
+objProductsClothes.push(variable)
+console.log(variable)
+
+console.log(objProductsClothes);
