@@ -9,17 +9,19 @@
 //}
 
     let header__search = document.querySelector('.header__search');
-    let header__closeIcon = document.querySelector('.header__closeIcon');
+    let header__close = document.querySelector('.header__close');
     let searchBox = document.querySelector('.searchBox');
 
-        header__search.onclick = function(){
-            searchBox.classList.add('active');
-            header__closeIcon.classList.add('active');
-            header__search.classList.add('active');
+    header__search.onclick = function(){
+        searchBox.classList.add('active');
+        header__close.classList.add('active');
+        header__search.classList.add('active');
 
-        }
-        closeBtn.onclick = function(){
-            searchBox.classList.remove('active');
-            header__closeIcon.classList.remove('active');
-            header__search.classList.remove('active');
-        }
+    } 
+    
+    
+    header__close.onclick = function(){
+        searchBox.classList.remove('active');
+        header__close.classList.remove('active');
+        header__search.classList.remove('active');
+    } 
