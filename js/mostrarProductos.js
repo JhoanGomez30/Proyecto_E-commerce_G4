@@ -27,10 +27,10 @@ function crearCard(name, price, img){
   return producto;
 }
 
-async function listarVideos(){
-    const listaAPI= await conexionAPI.listarVideos();
+async function listarProductos(){
+    const listaAPI= await conexionAPI.listarProductos();
 
     listaAPI.forEach(producto => productosContainer.appendChild(crearCard(producto.name, producto.price, producto.img)))
 }
 
-listarVideos();
+listarProductos();

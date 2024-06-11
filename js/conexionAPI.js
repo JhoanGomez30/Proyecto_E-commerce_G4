@@ -1,5 +1,5 @@
-async function listarVideos(){
-    const conexion= await fetch("http://localhost:3000/productos");
+async function listarProductos(){
+    const conexion= await fetch("http://localhost:3001/productos");
 
     const conexionConvertida= conexion.json();
 
@@ -10,5 +10,5 @@ async function listarVideos(){
 // listarVideos()
 
 export const conexionAPI={
-    listarVideos
+    listarProductos
 }
