@@ -6,7 +6,7 @@
     <title>Productos</title>
     <link rel="stylesheet" href="../Styles/normalize.css" />
     <link rel="stylesheet" href="../Styles/nosotros.css" />
-    <link rel="stylesheet" href="../Styles/productos.css" />
+    <link rel="stylesheet" href="../Styles/filter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -303,15 +303,36 @@
       </div>
     </header>
     <!-- Inicio página productos-->
-    <div class="products__container container">
+    <!-- Inicio filtro superior-->
+    <div class="product__container container">
       <div class="topFilter">
-        <div class="topFilter__text">
-          <p class="topFilter__paragraph">Todo</p>
-          <p class="topFilter__paragraph">Hombre</p>
-          <p class="topFilter__paragraph">Mujer</p>
-          <p class="topFilter__paragraph">Suplementos</p>
-        </div>
+        <p class="topFilter__paragraph">Todo</p>
+        <p class="topFilter__paragraph">Hombre</p>
+        <p class="topFilter__paragraph">Mujer</p>
+        <p class="topFilter__paragraph">Suplementos</p>
+        <p class="topFilter__paragraph">Calistenia</p>
       </div>
+      <!-- Fin filtro superior-->
+      <!-- Inicio barra de filtros-->
+      <!-- Inicio botón filtro mobile-->
+      <div class="filterButton__container">
+        <button
+          id="filterButton"
+          class="filterButton"
+          onclick="toggleFilterBar()"
+        >
+          Filtrar<svg
+            class="icon__filter"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" />
+          </svg>
+        </button>
+      </div>
+      <!-- Fin botón filtro mobile-->
       <div class="filterBar">
         <div class="filterBar__text">
           <div class="filterBar__order">
@@ -401,14 +422,18 @@
           </div>
         </div>
       </div>
+      <!-- Fin barra de filtros-->
+      <!-- Inicio tarjetas de productos-->
       <div class="productCard">
         <div class="productCard__content">
-          <h3>Todos los productos</h3>
+          <h3 class="productCard__subtitle">Todos los productos</h3>
         </div>
       </div>
+      <!-- Fin tarjetas de productos-->
     </div>
     <!-- Fin página productos-->
 
     <script src="../js/nav.js" defer></script>
+    <script src="../js/filter.js" defer></script>
   </body>
 </html>
