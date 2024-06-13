@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-poppins: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --white: #fff;
+    --color-secondary: #3366cc;
+    --color-principal: #004884;
+    --color-tertiary: #e6effd;
+    --color-quaternary: #ff9019;
+    --color-quinary: #7f00b2;
+    --color-senary: #d0a3e1;
+    --color-novenary: #a833b9;
+
+    --padding-container: 48px 0;
+    --padding-container-mobile: 24px 0;
+}
+
+body {
+    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    background-color: var(--color-principal1);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: var(--padding-container-mobile);
+}
+
+/* Inicio estilos contacto - Mobile */
+.register__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Inicio estilos contacto texto - Mobile */
+.contact__text {
+    text-align: center;
+    margin: 10px;
+}
+
+.contact__title {
+    font-size: 2rem;
+    color: var(--color-principal);
+    font-family: var(--font-poppins);
+}
+
+.contact__paragraph {
+    font-size: 1.2rem;
+    font-family: var(--font-open-sans);
+}
+
+/* Fin estilos contacto texto - Mobile */
+/* Inicio estilos contacto formulario - Mobile */
+.register__form {
+    margin: 24px auto;
+    width: 90%;
+}
+
+.form__container {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contact__group {
+    position: relative;
+    color: var(--color-principal);
+}
+
+.contact__input {
+    width: 100%;
+    background: none;
+    color: var(--color-principal);
+    font-size: 1rem;
+    padding: 0.6rem 0.3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-principal);
+    /* position: relative; */
+}
+
+.contact__input:not(:placeholder-shown) {
+    color: var(--color-secondary);
+}
+
+.contact__input:focus+.contact__label,
+.contact__input:not(:placeholder-shown)+.contact__label {
+    transform: translateY(-12px) scale(0.7);
+    transform-origin: left top;
+    color: var(--color-secondary);
+}
+
+.contact__label {
+    color: hsl(0, 0%, 50%);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform 0.5s, color 0.3s;
+}
+
+.contact__submit {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--color-principal);
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.contact__submit:hover {
+    background-color: var(--color-secondary);
+    color: var(--white);
+    border-color: var(--color-secondary);
+}
+
+.contact__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-secondary);
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform 0.4s;
+}
+
+.input__wrong {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ff0000;
+}
+
+/* Quitar y agregar clase para el mensaje de error */
+.anuncio__error{
+    position: absolute;
+    margin-top: 10px;
+    color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 7px;
+}
+
+.icon__error{
+    width: 20px;
+}
+
+.contact__input:focus~.contact__line,
+.contact__input:not(:placeholder-shown)~.contact__line {
+    transform: scale(1);
+}
+
+/* Fin estilos contacto formulario - Mobile */
+/* Inicio estilos imagen - Mobile */
+.contact__figure {
+    width: 100%;
+}
+
+.contact__img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.register{
+    margin-bottom: 80px;
+}
+
+.redirect__login a{
+    text-decoration: none;
+    color: var(--color-quinary);
+    font-weight: bold;
+}
+
+.redirect__login{
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Fin estilos imagen - Mobile */
+/* Fin estilos contacto - Mobile */
+
+@media (min-width: 768px) {
+
+    /* Inicio estilos contacto - Tablet */
+    .register__container {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+    }
+
+    /* Inicio estilos contacto formulario - Tablet */
+    .register__form {
+        margin: 24px 0 0 40px;
+    }
+
+    /* Fin estilos contacto formulario - Tablet */
+    /* Inicio estilos imagen - Tablet */
+    .contact__img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Fin estilos imagen - Tablet */
+    /* Fin estilos contacto - Tablet */
+}
+
+@media(min-width:1024px) {
+
+    /* Inicio estilos contacto - Desktop */
+    .contact__text {
+        margin: 30px;
+    }
+
+    /* Fin estilos contacto - Desktop */
+}
