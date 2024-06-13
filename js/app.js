@@ -16,23 +16,6 @@ const inputPhone = document.getElementById("tel");
 const inputMessage = document.getElementById("message");
 const btnSend = document.getElementById("btn__send")
 
-// validacion al enviar el formulario
-// const validarDatos = () => {
-
-//     if(!expresiones.name.test(inputName.value)){
-//         alert("el campo de nombre no cumple con las condiciones")
-//     }
-
-//     if(!expresiones.email.test(inputEmail.value)){
-//         alert("el campo de email no cumple con las condiciones")
-//     }
-
-//     if(!expresiones.phoneNumber.test(inputPhone.value)){
-//         alert("el campo de telefono no cumple con las condiciones")
-//     }
-// }
-
-
 const validarFormulario = (e) =>{
     switch(e.target.name){
         case "name":
@@ -85,8 +68,3 @@ function habilitarBoton(){
         }
     })
 }
-
-
-// formulario.addEventListener('click', (e) => {
-//     validarDatos()
-// })
