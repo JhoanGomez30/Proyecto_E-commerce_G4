@@ -6,7 +6,7 @@
     <title>Productos</title>
     <link rel="stylesheet" href="../Styles/normalize.css" />
     <link rel="stylesheet" href="../Styles/nosotros.css" />
-    <link rel="stylesheet" href="../Styles/filter.css" />
+    <link rel="stylesheet" href="../Styles/productos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -253,12 +253,12 @@
               ></path>
             </svg>
             <a
-              href="https://www.youtube.com/watch?v=_WJdsklHSkA"
+              href="home.html"
               class="nav__link"
               >Inicio</a
             >
             <a
-              href="https://www.youtube.com/watch?v=_WJdsklHSkA"
+              href="productos.html"
               class="nav__link"
               >Productos</a
             >
@@ -306,11 +306,11 @@
     <!-- Inicio filtro superior-->
     <div class="product__container container">
       <div class="topFilter">
-        <p class="topFilter__paragraph">Todo</p>
-        <p class="topFilter__paragraph">Hombre</p>
-        <p class="topFilter__paragraph">Mujer</p>
-        <p class="topFilter__paragraph">Suplementos</p>
-        <p class="topFilter__paragraph">Calistenia</p>
+        <button class="topFilter__paragraph">Todo</button>
+        <button class="topFilter__paragraph">Hombre</button>
+        <button class="topFilter__paragraph">Mujer</button>
+        <button class="topFilter__paragraph">Suplementos</button>
+        <button class="topFilter__paragraph">Calistenia</button>
       </div>
       <!-- Fin filtro superior-->
       <!-- Inicio barra de filtros-->
@@ -425,8 +425,75 @@
       <!-- Fin barra de filtros-->
       <!-- Inicio tarjetas de productos-->
       <div class="productCard">
-        <div class="productCard__content">
-          <h3 class="productCard__subtitle">Todos los productos</h3>
+        <div class="productCard__container container" data-productos>
+          <div class="cardProduct">
+            <figure class="card__figure">
+              <img src="../assets/img/imgProduct1.webp" alt="foto" class="card__img">
+            </figure>
+            <h5 class="card__title">CROP MESH TANK</h5>
+            <span class="card__startPoints">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start.svg" alt="estrella sin rellenar">
+            </span>
+            <div class="card__priceAndBuyFlex">
+              <p class="card__price">$30.00</p>
+              <img src="../assets/iconos/shoppingCart.svg" alt="carrito" class="card__buy">
+            </div>
+          </div>
+          <div class="cardProduct">
+            <figure class="card__figure">
+              <img src="../assets/img/imgProduct2.webp" alt="foto" class="card__img">
+            </figure>
+            <h5 class="card__title">CROP MESH TANK</h5>
+            <span class="card__startPoints">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start.svg" alt="estrella sin rellenar">
+            </span>
+            <div class="card__priceAndBuyFlex">
+              <p class="card__price">$30.00</p>
+              <img src="../assets/iconos/shoppingCart.svg" alt="carrito" class="card__buy">
+            </div>
+          </div>
+          <div class="cardProduct">
+            <figure class="card__figure">
+              <img src="../assets/img/imgProduct3.webp" alt="foto" class="card__img">
+            </figure>
+            <h5 class="card__title">CROP MESH TANK</h5>
+            <span class="card__startPoints">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start.svg" alt="estrella sin rellenar">
+            </span>
+            <div class="card__priceAndBuyFlex">
+              <p class="card__price">$30.00</p>
+              <img src="../assets/iconos/shoppingCart.svg" alt="carrito" class="card__buy">
+            </div>
+          </div>
+          <div class="cardProduct">
+            <figure class="card__figure">
+              <img src="../assets/img/imgProduct4.webp" alt="foto" class="card__img">
+            </figure>
+            <h5 class="card__title">CROP MESH TANK</h5>
+            <span class="card__startPoints">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+              <img class="card__startPoint" src="../assets/iconos/start.svg" alt="estrella sin rellenar">
+            </span>
+            <div class="card__priceAndBuyFlex">
+              <p class="card__price">$30.00</p>
+              <img src="../assets/iconos/shoppingCart.svg" alt="carrito" class="card__buy">
+            </div>
+          </div>
         </div>
       </div>
       <!-- Fin tarjetas de productos-->
@@ -435,5 +502,7 @@
 
     <script src="../js/nav.js" defer></script>
     <script src="../js/filter.js" defer></script>
+    <!-- <script src="../js/mostrarProductos.js" type="module"></script> -->
+
   </body>
 </html>
