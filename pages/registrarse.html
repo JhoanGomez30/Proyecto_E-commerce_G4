@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>        
 </head>
 
 <body>
@@ -271,7 +273,7 @@
 
                     <!-- Inicio input confirmar contraseña -->
                     <div class="contact__group">
-                        <input type="password" id="password" name="password" class="contact__input" placeholder=" "
+                        <input type="password" id="confirmPassword" name="password" class="contact__input" placeholder=" "
                             required />
                         <label for="password" class="contact__label">Confirma tu contraseña</label>
                         <span class="contact__line" id="message__group"></span>
@@ -279,12 +281,11 @@
                     <!-- fin input confirmar contaseña -->
                     
                     <!-- Inicio botón -->
-                    <input type="submit" name="btn__send" id="btn__send" class="contact__submit" value="Registrarse"
-                        disabled="true" />
+                    <button type="submit" name="btn__send" id="btn__send" class="contact__submit">Registrarse</button>
                     <!-- Fin botón -->
 
                     <!-- redireccion a inicio de sesion -->
-                    <span class="redirect__login">¿Ya tienes una cuenta? <a href="#">Iniciar Sesion</a></span>
+                    <span class="redirect__login">¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a></span>
                 </form>
             </div>
 
