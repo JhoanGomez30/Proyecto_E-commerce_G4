@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const mensajeAlerta = document.getElementById("error");
+    const mensajeNombre = document.getElementById("error__nombre");
+    const mensajeTelefono = document.getElementById("error__telefono");
+    const mensajeEmail = document.getElementById("error__email");
+    const mensajePassword = document.getElementById("error__password");
+    const mensajeCompass = document.getElementById("error__confirmPassword");
     const formulario = document.getElementById("formulario");
     const nombre = document.getElementById("name");
     const telefono = document.getElementById("tel");
     const email = document.getElementById("email");
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("confirmPassword");
+
+    // Ocultar todos los mensajes de error e iconos al cargar la página
+    ocultarTodosErrores();
 
     // Event listener para el envío del formulario
     formulario.addEventListener('submit', function(e) {
@@ -21,12 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Limpiar campos del formulario después del registro exitoso
-                    nombre.value = "";
-                    telefono.value = "";
-                    email.value = "";
-                    password.value = "";
-                    confirmPassword.value = "";
-                    mensajeAlerta.innerHTML = "";
+                    formulario.reset();
+                    ocultarTodosErrores();
                 }
             });
         } else {
@@ -42,68 +45,96 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para validar el nombre
     nombre.addEventListener('blur', function() {
-        validarNombre(nombre.value);
+        validarNombre();
     });
 
     // Función para validar el teléfono
     telefono.addEventListener('blur', function() {
-        validarTelefono(telefono.value);
+        validarTelefono();
     });
 
     // Función para validar el email
     email.addEventListener('blur', function() {
-        validarEmail(email.value);
+        validarEmail();
     });
 
     // Función para validar las contraseñas
     password.addEventListener('blur', function() {
-        validarContraseñas(password.value, confirmPassword.value);
+        validarContraseñas();
     });
 
     confirmPassword.addEventListener('blur', function() {
-        validarContraseñas(password.value, confirmPassword.value);
+        validarContraseñas();
     });
 
     // Función para validar el nombre
-    function validarNombre(nombre) {
-        if (tieneNumeros(nombre)) {
-            mensajeAlerta.innerHTML = "El nombre no debe contener números";
+    function validarNombre() {
+        if (tieneNumeros(nombre.value)) {
+            mostrarError(mensajeNombre, "El nombre no debe contener números");
         } else {
-            mensajeAlerta.innerHTML = ""; // Limpiar mensaje si es válido
+            ocultarError(mensajeNombre);
         }
     }
 
     // Función para validar el teléfono
-    function validarTelefono(telefono) {
-        if (!esNumero(telefono) || telefono.length < 10) {
-            mensajeAlerta.innerHTML = "El teléfono debe ser numérico y tener al menos 10 caracteres";
+    function validarTelefono() {
+        if (!esNumero(telefono.value) || telefono.value.length < 10) {
+            mostrarError(mensajeTelefono, "El teléfono debe ser numérico y tener al menos 10 caracteres");
         } else {
-            mensajeAlerta.innerHTML = ""; // Limpiar mensaje si es válido
+            ocultarError(mensajeTelefono);
         }
     }
 
     // Función para validar el email
-    function validarEmail(email) {
-        if (!validarFormatoEmail(email)) {
-            mensajeAlerta.innerHTML = "El email no tiene un formato válido.";
+    function validarEmail() {
+        if (!validarFormatoEmail(email.value)) {
+            mostrarError(mensajeEmail, "El email no tiene un formato válido.");
         } else {
-            mensajeAlerta.innerHTML = ""; // Limpiar mensaje si es válido
+            ocultarError(mensajeEmail);
         }
+    }
+
+    // Función para validar las contraseñas
+    function validarContraseñas() {
+        if (password.value !== confirmPassword.value) {
+            mostrarError(mensajeCompass, "Las contraseñas no coinciden");
+        } else {
+            ocultarError(mensajeCompass);
+        }
+    }
+
+    // Función para mostrar errores e iconos
+    function mostrarError(elemento, mensaje) {
+        const iconoError = elemento.parentElement.querySelector('.icon__error');
+        elemento.innerHTML = mensaje;
+        elemento.style.display = 'block';
+        iconoError.style.display = 'inline'; // Mostrar el icono
+    }
+
+    // Función para ocultar errores e iconos
+    function ocultarError(elemento) {
+        const iconoError = elemento.parentElement.querySelector('.icon__error');
+        elemento.innerHTML = "";
+        elemento.style.display = 'none';
+        iconoError.style.display = 'none'; // Ocultar el icono
+    }
+
+    // Función para ocultar todos los errores e iconos al cargar la página
+    function ocultarTodosErrores() {
+        const errores = document.querySelectorAll('.anuncio__error p');
+        const iconos = document.querySelectorAll('.icon__error');
+        errores.forEach(error => {
+            error.style.display = 'none';
+        });
+        iconos.forEach(icono => {
+            icono.style.display = 'none';
+        });
     }
 
     // Función para validar el formato del email
     function validarFormatoEmail(email) {
         var re = /\S+@\S+\.\S+/;
         return re.test(email);
-    }
-
-    // Función para validar las contraseñas
-    function validarContraseñas(password, confirmPassword) {
-        if (password !== confirmPassword) {
-            mensajeAlerta.innerHTML = "Las contraseñas no coinciden";
-        } else {
-            mensajeAlerta.innerHTML = ""; // Limpiar mensaje si coinciden
-        }
     }
 
     // Función para verificar si un string contiene números
@@ -118,10 +149,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para verificar si el formulario es válido
     function validateForm() {
-        validarNombre(nombre.value);
-        validarTelefono(telefono.value);
-        validarEmail(email.value);
-        validarContraseñas(password.value, confirmPassword.value);
-        return mensajeAlerta.innerHTML === "";
+        validarNombre();
+        validarTelefono();
+        validarEmail();
+        validarContraseñas();
+        // Validar que no haya ningún mensaje de error visible
+        return document.querySelectorAll('.anuncio__error p[style="display: block;"]').length === 0;
     }
 });

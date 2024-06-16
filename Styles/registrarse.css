@@ -146,9 +146,19 @@ body {
     height: 1px;
     background-color: #ff0000;
 }
+.anuncio__error P{
+    display: none;
+}
+
+.icon__error{
+    display: none;
+    width: 20px;
+
+}
 
 /* Quitar y agregar clase para el mensaje de error */
 .anuncio__error{
+    display: none;
     position: absolute;
     margin-top: 10px;
     color: #ff0000;
@@ -159,9 +169,7 @@ body {
     gap: 7px;
 }
 
-.icon__error{
-    width: 20px;
-}
+
 
 .contact__input:focus~.contact__line,
 .contact__input:not(:placeholder-shown)~.contact__line {
