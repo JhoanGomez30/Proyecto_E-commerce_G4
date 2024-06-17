@@ -12,25 +12,22 @@ function toggleFilterBar() {
  filterBar.classList.toggle("filterBar--active")
 }
 
-// const prev = document.querySelector('.topFilter__prev')
-// const next = document.querySelector('.topFilter__next')
-// const topFilter__paragraph = document.querySelector('.topFilter__paragraph')
+document.addEventListener("DOMContentLoaded", function() {
+  const leftScrollButton = document.querySelector('.left-scroll');
+  const rightScrollButton = document.querySelector('.right-scroll');
+  const topFilterContent = document.querySelector('.topFilter__content');
 
-// prev.addEventListener('click', () => {
-//   topFilter__paragraph.scrollLeft
-// })
-
-// ____________________________________________---
-// const figure = document.querySelector('.topFilter__figure');
-// const optionsContainer = document.querySelector('.topFilter__paragraph');
-
-// figure.addEventListener('click', (event) => {
-//   const scrollStep = 200; // Valor de desplazamiento horizontal
-//   if (event.clientX < figure.getBoundingClientRect().left) {
-//     // Click a la izquierda de topFilter__figure
-//     optionsContainer.scrollLeft -= scrollStep;
-//   } else {
-//     // Click a la derecha de topFilter__figure
-//     optionsContainer.scrollLeft += scrollStep;
-//   }
-// });
+  leftScrollButton.addEventListener("click", function() {
+    topFilterContent.scrollBy({
+      left: -150,
+      behavior: "smooth"
+    })
+  })
+  
+  rightScrollButton.addEventListener("click", function() {
+    topFilterContent.scrollBy({
+      left: 150, // Ajusta el valor según sea necesario para el desplazamiento
+      behavior: "smooth" // Desplazamiento suave
+    });
+  })
+})
