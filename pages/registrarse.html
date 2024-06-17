@@ -228,13 +228,16 @@
             </nav>
         </div>
     </header>
+
+    <h1 class="contact__title">Registro</h1>
+
     <!-- inicio registro de usuarios -->
     <section class="register">
         <div class="register__container container">
 
             <!-- Inicio contacto formulario -->
             <div class="register__form">
-                <form action="https://formspree.io/f/mzbnqwwj" method="POST" class="form__container" id="formulario">
+                <form  class="form__container" id="signupForm">
                     <!-- Inicio input nombre -->
                     <div class="contact__group">
                         <input type="text" id="name" name="name" class="contact__input" placeholder=" " required />
@@ -285,9 +288,9 @@
 
                     <!-- Inicio input confirmar contraseña -->
                     <div class="contact__group">
-                        <input type="password" id="confirmPassword" name="password" class="contact__input" placeholder=" "
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="contact__input" placeholder=" "
                             required />
-                        <label for="password" class="contact__label">Confirma tu contraseña</label>
+                        <label for="confirmPassword" class="contact__label">Confirma tu contraseña</label>
                         <span class="contact__line" id="message__group"></span>
                         <div class="anuncio__error">
                             <img src="../assets/iconos/error-svgrepo-com.svg" class="icon__error" alt="icono error">
@@ -525,6 +528,7 @@
     <script src="../js/nav.js" defer></script>
     <script src="../js/app.js" defer></script>
     <script src="../js/registrarse.js" defer></script>
+    <script src="../js/registroLocal.js"></script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
