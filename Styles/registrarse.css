@@ -33,7 +33,15 @@ body {
 }
 
 /* Inicio estilos contacto - Mobile */
+
+.register{
+    /* background-color: var(--color-tertiary); */
+    padding-bottom: 80px;
+}
+
+
 .register__container {
+    /* background-color: var(--color-tertiary); */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 }
@@ -48,6 +56,7 @@ body {
     font-size: 2rem;
     color: var(--color-principal);
     font-family: var(--font-poppins);
+    text-align: center;
 }
 
 .contact__paragraph {
@@ -188,9 +197,6 @@ body {
     border-radius: 10px;
 }
 
-.register{
-    margin-bottom: 80px;
-}
 
 .redirect__login a{
     text-decoration: none;
