@@ -53,13 +53,19 @@ h3 {
 .topFilter {
   grid-area: topFilter;
 
-  
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
 
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 130px;
+.topFilter__content {
+  display: flex;
+  align-items: center;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  padding: 10px 0;
+  scrollbar-width: none;
 }
 
 .topFilter__paragraph {
@@ -67,19 +73,44 @@ h3 {
   justify-content: center;
   background-color: var(--color-tertiary);
   color: var(--color-principal);
-  padding: 7px 25px;
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  margin: 10% 8%;
-  margin-left: 0px;
   cursor: pointer;
+  flex-shrink: 0;
+  padding: 10px 20px;
+  margin: 0 5px 0;
 }
 
 .topFilter__paragraph:hover {
   background-color: var(--color-principal);
   color: var(--white);
   border: none;
+}
+
+.topFilter__button {
+  cursor: pointer;
+  border: none;
+}
+
+.topFilter__button path{
+  fill: var(--color-principal);
+}
+
+.left-scroll,
+.right-scroll {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.left-scroll {
+  order: -1;
+}
+
+.right-scroll {
+  order: 1;
 }
 
 /* Media Query Mobile - Botón de filtro*/
@@ -121,8 +152,6 @@ h3 {
   display: flex;
 }
 
-
-
 .filterBar__subtitle {
   padding: 6% 0 2%;
 }
@@ -160,7 +189,7 @@ li {
 }
 
 input {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 
 /* Media Query Mobile - Tarjetas de producto */
@@ -235,7 +264,6 @@ input {
 
   .productCard__container{
     grid-template-columns: repeat(2, 1fr);
-    
   }
 }
 
@@ -253,7 +281,7 @@ input {
   }
 
   .topFilter__paragraph {
-    padding: 10px 25px;
+    padding: 12px 55px;
   }
   /* Media Query escritorio - Botón de filtro */
   .filterButton__container {
@@ -288,7 +316,7 @@ input {
   }
 
   .topFilter__paragraph {
-    padding: 12px 25px;
+    padding: 13px 95px;
   }
   /* Media Query escritorio 1440px - Tarjetas de producto */
   .productCard__subtitle {
