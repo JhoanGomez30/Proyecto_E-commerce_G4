@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Función para validar las contraseñas
-    password.addEventListener('blur', function() {
+    password.addEventListener('changed', function() {
         validarContraseñas();
     });
 
-    confirmPassword.addEventListener('blur', function() {
+    confirmPassword.addEventListener('changed', function() {
         validarContraseñas();
     });
 
