@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mensajeEmail = document.getElementById("error__email");
     const mensajePassword = document.getElementById("error__password");
     const mensajeCompass = document.getElementById("error__confirmPassword");
-    const formulario = document.getElementById("formulario");
+    const formulario = document.getElementById("signupForm");
     const nombre = document.getElementById("name");
     const telefono = document.getElementById("tel");
     const email = document.getElementById("email");
@@ -20,7 +20,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validación de que el formulario fue completado
         if (validateForm()) {
-            // SweetAlert2 de éxito si el formulario es válido
+            const Users = JSON.parse(localStorage.getItem("users")) || [];
+            const isUserRegistered = Users.find(user => user.email === email.value);
+            if (isUserRegistered) {
+                Swal.fire({
+                    title: "Error",
+                    text: "El usuario ya está registrado.",
+                    icon: "error",
+                    confirmButtonText: "Aceptar",
+                });
+                return;
+            }
+
+            Users.push({
+                name: nombre.value,
+                telefono: telefono.value,
+                email: email.value,
+                password: password.value,
+                confirmPassword: confirmPassword.value
+            });
+
+            localStorage.setItem('users', JSON.stringify(Users));
+
+            // SweetAlert2 de éxito si el formulario es válido y usuario no está registrado
             Swal.fire({
                 title: "Registro exitoso!",
                 text: "Te has registrado exitosamente.",
@@ -30,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Limpiar campos del formulario después del registro exitoso
                     formulario.reset();
                     ocultarTodosErrores();
+                    // Redireccionar al login
+                    window.location.href = "inicioSesion.html";
                 }
             });
         } else {
@@ -44,26 +68,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Función para validar el nombre
-    nombre.addEventListener('blur', function() {
+    nombre.addEventListener('input', function() {
         validarNombre();
     });
 
     // Función para validar el teléfono
-    telefono.addEventListener('blur', function() {
+    telefono.addEventListener('input', function() {
         validarTelefono();
     });
 
     // Función para validar el email
-    email.addEventListener('blur', function() {
+    email.addEventListener('input', function() {
         validarEmail();
     });
 
     // Función para validar las contraseñas
-    password.addEventListener('blur', function() {
+    password.addEventListener('input', function() {
         validarContraseñas();
     });
 
-    confirmPassword.addEventListener('blur', function() {
+    confirmPassword.addEventListener('input', function() {
         validarContraseñas();
     });
 
