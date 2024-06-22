@@ -2,6 +2,8 @@ const nav = document.querySelector('.nav__links');
 const botonAbrir = document.querySelector('#nav__open');
 const botonAbrirMenu = document.querySelector('.header__menu--container')
 const botonCerrar = document.querySelector('#nav__close');
+const iconoUser=document.querySelector("#user");
+
 
 
 botonAbrirMenu.addEventListener("click", ()=>{
@@ -30,3 +32,7 @@ document.addEventListener("click", function(event) {
 })
 
 
+iconoUser.addEventListener("click", ()=>{
+
+    window.location.href="registrarse.html";
+})

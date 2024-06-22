@@ -228,42 +228,21 @@
             </nav>
         </div>
     </header>
-
-    <h1 class="contact__title">Registro</h1>
-
     <!-- inicio registro de usuarios -->
+    <h1 class="contact__title">Inicio Sesión</h1>
+
     <section class="register">
         <div class="register__container container">
 
+
             <!-- Inicio contacto formulario -->
             <div class="register__form">
-                <form  class="form__container" id="signupForm">
-                    <!-- Inicio input nombre -->
-                    <div class="contact__group">
-                        <input type="text" id="name" name="name" class="contact__input" placeholder=" " required />
-                        <label for="name" class="contact__label">Ingresa tu nombre</label>
-                        <span class="contact__line" id="name__group"></span>
-                        <div class="anuncio__error">
-                            <img src="../assets/iconos/error-svgrepo-com.svg" class="icon__error" alt="icono error">
-                            <p id="error__nombre">error, campo incorrecto</p>
-                        </div>
-                    </div>
-                
-                    <!-- Fin input nombre -->
-                    <!-- Inicio input teléfono -->
-                    <div class="contact__group">
-                        <input type="tel" id="tel" name="tel" class="contact__input" placeholder=" " required />
-                        <label for="tel" class="contact__label">Ingresa tu teléfono</label>
-                        <span class="contact__line" id="tel__group"></span>
-                        <div class="anuncio__error">
-                            <img src="../assets/iconos/error-svgrepo-com.svg" class="icon__error" alt="icono error">
-                            <p id="error__telefono">error, campo incorrecto</p>
-                        </div>
-                    </div>
-                    <!-- Fin input teléfono -->
+
+                <form  class="form__container" id="loginForm">
+                 
                     <!-- Inicio input email -->
                     <div class="contact__group">
-                        <input type="email" id="email" name="email" class="contact__input" placeholder=" " required />
+                        <input type="email" id="email" name="email" class="contact__input" placeholder=" " required autofocus />
                         <label for="email" class="contact__label">Ingresa tu correo electrónico</label>
                         <span class="contact__line" id="email__group"></span>
                         <div class="anuncio__error">
@@ -284,27 +263,16 @@
                             <p id="error__password">error, campo incorrecto</p>
                         </div>
                     </div>
-                    <!-- fin input contaseña -->
+                    <!-- fin input contraseña -->
 
-                    <!-- Inicio input confirmar contraseña -->
-                    <div class="contact__group">
-                        <input type="password" id="confirmPassword" name="confirmPassword" class="contact__input" placeholder=" "
-                            required />
-                        <label for="confirmPassword" class="contact__label">Confirma tu contraseña</label>
-                        <span class="contact__line" id="message__group"></span>
-                        <div class="anuncio__error">
-                            <img src="../assets/iconos/error-svgrepo-com.svg" class="icon__error" alt="icono error">
-                            <p id="error__confirmPassword">error, campo incorrecto</p>
-                        </div>
-                    </div>
-                    <!-- fin input confirmar contaseña -->
+                 
                     
                     <!-- Inicio botón -->
-                    <button type="submit" name="btn__send" id="btn__send" class="contact__submit">Registrarse</button>
+                    <button type="submit" name="btn__send" id="btn__send" class="contact__submit">Inicia Sesión</button>
                     <!-- Fin botón -->
 
                     <!-- redireccion a inicio de sesion -->
-                    <span class="redirect__login">¿Ya tienes una cuenta? <a href="inicioSesion.html">Iniciar Sesión</a></span>
+                    <span class="redirect__login">No tienes una cuenta? <a href="registrarse.html">Registrate</a></span>
                 </form>
             </div>
 
@@ -527,8 +495,7 @@
 
     <script src="../js/nav.js" defer></script>
     <script src="../js/app.js" defer></script>
-    <script src="../js/registrarse.js" defer></script>
-    <script src="../js/registroLocal.js"></script>
+    <script src="../js/inicioSesion.js" defer></script>
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
