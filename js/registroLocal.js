@@ -1,4 +1,4 @@
-const signupForm=document.querySelector("#signupForm");
+const signupForm=document.querySelector("#formulario");
 
 
 signupForm.addEventListener("submit", (e)=>{
@@ -18,10 +18,35 @@ signupForm.addEventListener("submit", (e)=>{
     Users.push({name: name, telefono: telefono, email: email, password:password, confirmPassword: confirmPassword });
 
     localStorage.setItem('users', JSON.stringify(Users));
-    alert("Registro Exitoso!");
+    
+    //--SWIFT ALERT NATALIA-------//
+    Swal.fire({
+        title: "Registro exitoso!",
+        text: "Te has registrado exitosamente.",
+        icon: "success",
+        // timer:3000,
+        confirmButtonText: "Aceptar"
+
+    });
+    // setTimeout(()=>{
+    //      window.location.href="inicioSesion.html";
+
+    // },5000);
+
+    // alert("registrado, irás a la pagina de inicio de sesion")
 
     //Redireccion al login
 
-    window.location.href="inicioSesion.html";
+    // window.location.href="inicioSesion.html";
+
+    // Swal.fire({
+    //     icon: 'success',
+    //     title: 'Registro exitoso',
+    //     text: '¡Ahora puedes iniciar sesión!',
+    //     confirmButtonText: 'Ir al inicio de sesión'
+    //   }).then(() => {
+    //     // Redirigir al usuario al inicio de sesión
+    //     window.location.href = 'inicioSesion.html'; // Reemplaza con la URL de tu página de inicio de sesión
+    //   });
 });
 
