@@ -7,9 +7,7 @@ loginForm.addEventListener("submit", (e)=>{
     const formulario = document.getElementById("loginForm");
     const email=document.querySelector("#email").value;
     const password=document.querySelector("#password").value;
-
     const Users= JSON.parse(localStorage.getItem("users")) || [];
-
     const validUser= Users.find(user => user.email === email && user.password === password);
 
     if(!validUser){
