@@ -114,6 +114,10 @@ body {
     transition: transform 0.5s, color 0.3s;
 }
 
+.input__checkbox{
+    accent-color: var(--color-quaternary);
+}
+
 .contact__submit {
     display: block;
     text-decoration: none;
@@ -189,12 +193,14 @@ body {
 /* Inicio estilos imagen - Mobile */
 .contact__figure {
     width: 100%;
-}
+    border-radius: 20px;
+}    
 
 .contact__img {
     display: none;
     width: 100%;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1)
 }
 
 
