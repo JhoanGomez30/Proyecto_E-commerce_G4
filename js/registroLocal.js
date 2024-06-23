@@ -1,5 +1,6 @@
 const signupForm=document.querySelector("#signupForm");
 
+
 signupForm.addEventListener("submit", (e)=>{
     e.preventDefault();
     const name= document.querySelector("#name").value;
@@ -22,4 +23,5 @@ signupForm.addEventListener("submit", (e)=>{
     //Redireccion al login
 
     window.location.href="inicioSesion.html";
-})
+});
+
