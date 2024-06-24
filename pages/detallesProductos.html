@@ -304,20 +304,87 @@
       </div>
     </header>
 
-    <h1>Hola</h1>
-
+    
+ <!-- Inicio detalles del producto -->
     <main class="detailProduct">
         <div class="detailProduct__container container">
             <article class="gallery">
                 <div class="gallery__imgContainer">
-                    
-                    
+                  <img src="../assets/iconos/icon-previous.svg" alt="flecha atras" class="gallery__previous">
+                  <img src="../assets/iconos/icon-next.svg" alt="flecha delante" class="gallery__next">
+          
                 </div>
+                <div class="gallery__thumbnails">
+                  <img id="1" src="../assets/iconos/image-product-1-thumbnail.jpg" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="2" src="../assets/iconos/image-product-2-thumbnail.jpg" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="3" src="../assets/iconos/image-product-3-thumbnail.jpg" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="4" src="../assets/iconos/image-product-4-thumbnail.jpg" alt="thumbnail" class="gallery__thumbnail">
+
+                </div>
+            </article>
+            <article class="details">
+              <h2 class="details__title">Fall limited Edition Sneakers</h2>
+              <span class="card__startPoints">
+                <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+                <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+                <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+                <img class="card__startPoint" src="../assets/iconos/start-bold.svg" alt="estrella rellenada">
+                <img class="card__startPoint" src="../assets/iconos/start.svg" alt="estrella sin rellenar">
+              </span>
+              <p class="details__description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+              <div class="details__prices">
+                <p class="details__before">$250.00</p>
+                <p class="details__now">$125.00</p>
+              </div>
+
+              <div class="details__productQuantity">
+                <div class="input">
+                  <img src="../assets/iconos/icon-minus.svg" alt="minus" class="input__minus">
+                  <input class="input__number" type="number" value="0">
+                  <img src="../assets/iconos/icon-plus.svg" alt="plus" class="input__plus">
+                </div>
+
+                <button class="details__button">Agregar al carrito</button>
+              </div>
             </article>
         </div>
         
     </main>
+    <!-- Fin detalles del producto -->
 
+    <!-- Inicio cart modal -->
+     <div class="cartModal container">
+      <p class="cartModal__title">
+        Carrito
+      </p>
+      <div class="cartModal__checkout">
+        <div class="cartModal__details">
+          <img class="cartModal__img" src="../assets/iconos/image-product-1-thumbnail.jpg" alt="thumbnail">
+          <div class="cartModal__productContainer">
+            <p class="cartModal__productName">Autum Limited Edition...</p>
+            <p class="cartModal__price">$125.00 x3 <span class="cartModal__priceTotal">$375.00</span></p>
+          </div>
+          <img src="../assets/iconos/icon-delete.svg" alt="delete" class="cartModal__iconDelete">
+        </div>
+        <button class="cartModal__buttonDelete">Ver compra</button>
+      </div>
+     </div>
+    <!-- Fin cart modal -->
+
+
+    <!-- Inicio gallery modal -->
+
+    <div class="modalGallery__background">
+      <article class="modalGallery">
+        <img src="../assets/iconos/icon-close.svg" alt="close" class="modalGallery__iconClose">
+        <div class="modalGallery__imgContainer">
+          <img src="../assets/iconos/icon-previous.svg" alt="flecha atras" class="modalGallery__previous">
+          <img src="../assets/iconos/icon-next.svg" alt="flecha delante" class="modalGallery__next">
+        </div>
+      </article>
+    </div>
+     <!-- Fin gallery modal -->
 
     <footer class="footer">
         <figure class="footer__figureLogo container">
