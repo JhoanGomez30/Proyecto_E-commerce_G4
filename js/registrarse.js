@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Función para validar las contraseñas
+
     password.addEventListener('input', function() {
+
         validarContraseñas();
     });
 
