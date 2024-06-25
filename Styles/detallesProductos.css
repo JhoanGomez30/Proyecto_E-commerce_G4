@@ -238,11 +238,48 @@ body {
 @media(min-width:768px){
 
     .detailProduct__container{
-        display: flex;
+        display: grid;
+        /* grid-template-areas: 
+        "thumbnails imgGallery details"; */
+        grid-template-columns:1fr 1fr;
+        /* grid-template-rows: 400px; */
+
+        /* justify-content: center; */
     }
+
+    .gallery{
+        display: grid;
+         grid-template-areas: 
+        "thumbnails imgGallery imgGallery"
+        "thumbnails imgGallery imgGallery"
+        ;
+        grid-template-columns:.6fr 3fr;
+
+        width: 100%;
+        height: 100%;
+       
+    }
+
+    .gallery__imgContainer{
+        grid-area: imgGallery;
+        width: 100%;
+        /* height: 100%; */
+       
+    }
+
     .gallery__thumbnails{
         display: block;
+        grid-area: thumbnails;
+        width: 90px;
         
+    }
+    .gallery__thumbnail{
+        width: 100%;
+    }
+    .details{
+        width: 100%;
+        height: 100%;
+        /* grid-area: details; */
     }
 
 }
