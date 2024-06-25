@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validarNombre() {
         if (tieneNumeros(nombre.value)) {
             mostrarError(mensajeNombre, "El nombre no debe contener números");
+            console.log("mensaje error");
         } else {
             ocultarError(mensajeNombre);
         }
