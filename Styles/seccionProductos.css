@@ -148,6 +148,7 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   margin-left: 15px;
+  cursor: pointer;
 }
 .card__figure{
   width: 200px;
