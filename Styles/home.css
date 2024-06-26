@@ -1,0 +1,145 @@
+:root {
+    --font-poppins: "Poppins", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --white: #fff;
+    --color-secondary: #3366cc;
+    --color-principal: #004884;
+    --color-tertiary: #e6effd;
+    --color-quaternary: #ff9019;
+    --color-quinary: #7f00b2;
+    --color-senary: #d0a3e1;
+    --color-novenary: #a833b9;
+
+    --padding-container: 48px 0;
+    --padding-container-mobile: 24px 0;
+}
+
+
+
+
+.main__container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+
+.main__heroText{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main__title--home{
+    font-size: 2.3rem;
+    margin-bottom: 8%;
+    color: var(--color-secondary);
+    color: #000;
+}
+
+.main__span{
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+.main__paragraph{
+    margin-bottom: 8%;
+    line-height: 24px;
+}
+
+.main__cta{
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-color: var(--color-secondary);
+    font-size: 14px;
+    border-radius: 30px;
+    transition: border-top-right-radius 0.5s ease-in-out;
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.main__cta:hover{
+    background-color: var(--color-principal);
+}
+
+.main__figure{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__img{
+    width: 90%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.main__elipse{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../assets/iconos/doodles.svg');
+    background-size: contain;
+    background-position:  bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    rotate: 45deg;
+}
+/* Fin hero main */
+
+
+@media(min-width:768px){
+    .main{
+        max-height: 100vh;
+
+    }
+
+    .main__container{
+        padding-top: 0;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main__heroText{
+        text-align: left;
+    }
+    
+    .main__title--home{
+        font-size: 2.7rem;
+    }
+    
+    .main__cta{
+        width: fit-content;
+        padding: 14px 60px;
+        
+    } 
+
+    /* .main__figure{
+        height: 600px;
+        display: block;
+    } */
+    
+    .main__img{
+        width: 100%;
+        height: 100%;
+        max-height: inherit;
+        aspect-ratio: inherit;
+        object-fit: cover;
+    }
+
+    @media(min-width:1024px){
+        .main__title--home{
+            font-size: 2.9rem;
+        }
+
+        .main__cta{
+            font-size: 1.5rem;
+        } 
+    
+    }
+}
