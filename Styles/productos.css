@@ -211,6 +211,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  cursor: pointer;
 }
 .card__figure{
   width: 200px;
