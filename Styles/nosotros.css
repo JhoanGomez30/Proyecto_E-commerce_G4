@@ -784,13 +784,13 @@ body {
     line-height: 50px;
 }
 .footer__contact::after{
-    content:'Phone: +57-313-761-3879';
+    content:'Teléfono: +57 313 761 3879';
     margin-left: 10px;
     
 }
 
 .footer__contact--email::after{
-    content: 'conctactanos@fitemporium.com';
+    content: 'contactanos@fitemporium.com';
    
 }
 
