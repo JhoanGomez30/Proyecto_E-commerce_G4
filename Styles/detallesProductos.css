@@ -306,13 +306,13 @@ body {
         font-size: 1.7rem ;
     }
 
-    .card__startPoints{
+    .card__startPoints--details{
         width: 100%;
         display: inline-block;
        
     }
 
-    .card__startPoint{
+    .card__startPoint--details{
         display: inline-block;
         width: 5%;
 
@@ -374,7 +374,7 @@ body {
     .details__title{
         font-size: 2rem ;
     }
-    .card__startPoint{
+    .card__startPoint--details{
         width: 6%;
 
     }
@@ -390,7 +390,7 @@ body {
     .details__title{
         font-size: 2.5rem ;
     }
-    .card__startPoint{
+    .card__startPoint--details{
         width: 6%;
 
     }
