@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --white: #fff;
+  --color-secondary: #3366cc;
+  --color-principal: #004884;
+  --color-tertiary: #e6effd;
+  --color-quaternary: #ff9019;
+  --color-quinary: #7f00b2;
+  --color-senary: #d0a3e1;
+  --color-novenary: #a833b9;
+
+  --padding-container: 48px 0;
+  --padding-container-mobile: 24px 0;
+}
+
+body {
+  font-family: var(--font-open-sans);
+  font-size: 1rem;
+  background-color: var(--color-principal1);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--padding-container-mobile);
+}
+
+h3 {
+  font-family: var(--font-poppins);
+}
+
+/* Media Query Mobile */
+.product__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "topFilter"
+    "filterButton"
+    "filterBar"
+    "productCard";
+}
+
+/* Media Query Mobile - Filtro superior */
+
+
+.topFilter {
+  grid-area: topFilter;
+
+  
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 130px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.topFilter__paragraph {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-tertiary);
+  color: var(--color-principal);
+  padding: 7px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  margin: 10% 8%;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.topFilter__paragraph:hover {
+  background-color: var(--color-principal);
+  color: var(--white);
+  border: none;
+}
+
+/* Media Query Mobile - Botón de filtro*/
+.filterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-principal);
+  background-color: var(--color-tertiary);
+  padding: 7px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.icon__filter {
+  color: var(--color-principal);
+  fill: var(--color-principal);
+  width: 30px;
+  height: 25px;
+}
+
+/* Media Query Mobile - Barra de filtro*/
+.product__container .filterBar {
+  grid-area: filterBar;
+}
+
+.filterBar {
+  display: none;
+  padding-left: 3%;
+}
+
+.filterBar--active{
+  display: flex;
+}
+
+
+
+.filterBar__subtitle {
+  padding: 6% 0 2%;
+}
+
+li {
+  list-style: none;
+}
+
+.filterBar__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+}
+
+/* Media Query Mobile - Botón barra de filtro*/
+.filterBar__button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-principal);
+  background-color: var(--color-tertiary);
+  padding: 13px 8px;
+  border: none;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filterBar__button:hover {
+  background-color: var(--color-secondary);
+  color: var(--white);
+  border-color: var(--color-secondary);
+}
+
+input {
+  margin-bottom: 7px;
+}
+
+/* Media Query Mobile - Tarjetas de producto */
+.product__container .productCard {
+  grid-area: productCard;
+}
+
+.productCard__container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  /* width: fit-content; */
+  gap: 40px;
+}
+
+.cardProduct{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card__figure{
+  width: 200px;
+
+}
+.card__img{
+  width: 100%;
+
+  aspect-ratio: 259/309;
+  border-radius: 10px;
+}
+
+.card__title{
+  margin: 5% 0 4%;
+}
+
+.card__startPoints{
+  margin-bottom: 4%;
+}
+
+.card__startPoint{
+  width: 12%;
+}
+
+.card__priceAndBuyFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.card__price{
+  font-weight: 600;
+}
+
+.card__buy{
+ margin-right: 5%;
+  
+}
+.productCard__subtitle {
+  margin: 5% auto;
+}
+
+@media (min-width: 768px) {
+
+  /* Media Query Tablet - Filtro superior */
+  .topFilter {
+    grid-auto-columns: 200px;
+  }
+
+  .productCard__container{
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Media Query escritorio - Contenedor */
+  .product__container {
+    grid-template-areas:
+      "topFilter  topFilter"
+      "filterBar productCard";
+    grid-template-columns: 25% 75%;
+  }
+  /* Media Query escritorio - Filtro superior */
+  .topFilter {
+    grid-auto-columns: 250px;
+  }
+
+  .topFilter__paragraph {
+    padding: 10px 25px;
+  }
+  /* Media Query escritorio - Botón de filtro */
+  .filterButton__container {
+    display: none;
+  }
+  /* Media Query escritorio - Barra de filtro */
+  .filterBar {
+    display: flex;
+  }
+  /* Media Query escriotorio - Tarjetas de producto */
+  .productCard__subtitle {
+    margin: 1.5% auto;
+  }
+
+  .productCard__container{
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Media Query escritorio 1440px - Contenedor */
+  .product__container {
+    grid-template-areas:
+      "topFilter  topFilter"
+      "filterBar productCard";
+    grid-template-columns: 20% 80%;
+  }
+  /* Media Query escritorio 1440px - Filtro superior */
+  .topFilter {
+    grid-auto-columns: 350px;
+  }
+
+  .topFilter__paragraph {
+    padding: 12px 25px;
+  }
+  /* Media Query escritorio 1440px - Tarjetas de producto */
+  .productCard__subtitle {
+    margin: 1% auto;
+  }
+}
