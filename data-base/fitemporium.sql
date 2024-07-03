@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-07-2024 a las 00:16:57
+-- Tiempo de generación: 03-07-2024 a las 06:22:49
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Versión de PHP: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,22 +54,23 @@ INSERT INTO `clientes` (`ID_Cliente`, `Nombre`, `Apellido`, `Telefono`, `Correo_
 
 CREATE TABLE `ordenes` (
   `ID_Orden` int(11) NOT NULL,
-  `ID_Productos` int(11) DEFAULT NULL,
+  `ID_Productos` int(11) NOT NULL,
   `Fecha_orden` date DEFAULT NULL,
   `Cantidad_orden` int(11) DEFAULT NULL,
-  `Estado_orden` varchar(25) DEFAULT NULL
+  `Estado_orden` varchar(25) DEFAULT NULL,
+  `ID_Cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `ordenes`
 --
 
-INSERT INTO `ordenes` (`ID_Orden`, `ID_Productos`, `Fecha_orden`, `Cantidad_orden`, `Estado_orden`) VALUES
-(1, 1, '2024-01-15', 5, 'Completada'),
-(2, 2, '2024-02-20', 10, 'En proceso'),
-(3, 3, '2024-03-10', 2, 'Cancelada'),
-(4, 4, '2024-04-05', 1, 'Pendiente'),
-(5, 5, '2024-05-25', 8, 'Completada');
+INSERT INTO `ordenes` (`ID_Orden`, `ID_Productos`, `Fecha_orden`, `Cantidad_orden`, `Estado_orden`, `ID_Cliente`) VALUES
+(1, 1, '2024-01-15', 5, 'Completada', 0),
+(2, 2, '2024-02-20', 10, 'En proceso', 0),
+(3, 3, '2024-03-10', 2, 'Cancelada', 0),
+(4, 4, '2024-04-05', 1, 'Pendiente', 0),
+(5, 5, '2024-05-25', 8, 'Completada', 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,8 @@ CREATE TABLE `shopping_cart` (
   `ID_Carrito` int(11) NOT NULL,
   `Valor_Total` decimal(10,2) NOT NULL,
   `Cantidad` int(11) NOT NULL,
-  `ID_Producto` int(11) DEFAULT NULL
+  `ID_Producto` int(11) NOT NULL,
+  `ID_Cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
@@ -180,7 +182,8 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `shopping_cart`
   ADD PRIMARY KEY (`ID_Carrito`),
-  ADD KEY `ID_Producto` (`ID_Producto`);
+  ADD KEY `ID_Producto` (`ID_Producto`),
+  ADD KEY `clientes_ibfk_1` (`ID_Cliente`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -236,7 +239,8 @@ ALTER TABLE `pagos`
 -- Filtros para la tabla `shopping_cart`
 --
 ALTER TABLE `shopping_cart`
-  ADD CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`ID_Producto`) REFERENCES `productos` (`ID_Producto`);
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`ID_Cliente`) REFERENCES `clientes` (`ID_Cliente`),
+  ADD CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`ID_Cliente`) REFERENCES `shopping_cart` (`ID_Carrito`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
