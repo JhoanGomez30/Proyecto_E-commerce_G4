@@ -36,7 +36,7 @@ body {
     padding: var(--padding-container);
 }
 
-.header__container {
+/* .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +56,6 @@ body {
 }
 
 .header__logo {
-    /* color: var(--color-principal); */
     width: 30px;
     height: 30px;
     fill: var(--color-principal);
@@ -183,7 +182,6 @@ body {
     align-items: center;
     justify-content: flex-start;
     background-color: var(--white);
-    /* padding: 5rem 3rem 3rem; */
     z-index: 2;
     gap: 70px;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
@@ -277,7 +275,7 @@ body {
     color: var(--color-principal);
     fill: var(--color-principal);
     cursor: pointer;
-}
+} */
 
 
 .main__container {
@@ -286,7 +284,7 @@ body {
     justify-content: center;
     padding: 24px 0 48px;
 
-}
+} 
 
 /*Erley trabajo en el boton*/
 .main__content {
@@ -819,25 +817,11 @@ body {
 .footer__icon:hover{
     fill: var(--color-quaternary);
 }
-
-
-
-
-
 /* Fin Footer Miguel Angel */
-
-
-
-
-@media(min-width:375px){
-    .header__userIcon{
-      display: block;
-    }
-}
 
 /*Inicio mediaqueries menu desplegable*/
 
-@media(min-width:425px){
+/* @media(min-width:425px){
     .nav__links{
         
        
@@ -861,70 +845,35 @@ body {
 
 @media(min-width:700px){
     .nav__links{
-        
-       
         width: 40%;
-       
     }
 
-}
+}  */
 
 
-@media(min-width:768px) {
-
-    .nav__links{
-        opacity: 1;
-        visibility: visible;
-        position: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-        box-shadow: inherit;
-        width: inherit;
-        font-size: inherit;
-
-
-    }
-
-    .header__closeIcon{
-        display: none;
-    }
-
-    .nav__link {
-        display: block;
-    }
-    /*Fin mediaqueries menu desplegable*/
-    
+@media(min-width:768px) {    
     .header__menu--container{
         display: none;
     }
     .header__menu{
         display: none;
-    }
-
-
+    } 
 
     .main__subtitle {
         margin-bottom: 9%;
-
     }
 
     .main__container {
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-between;
         gap: 16px;
-
     }
 
     .main__content {
-
         text-align: left;
         align-items: flex-start;
-
     }
+
     .main__paragraph{
         margin-bottom: 9%;
         font-size: 1.1rem;
@@ -994,7 +943,6 @@ body {
 
     .values__content{
         text-align: left;
-        padding: 1.5%;
     }
 
     /* fin estilos valores */
