@@ -40,25 +40,26 @@ h3 {
 .product__container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "topFilter"
+    "filterButton"
+    "filterBar"
+    "productCard";
 }
 
 /* Media Query Mobile - Filtro superior */
 
 
 .topFilter {
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-  margin-bottom: 10px;
-}
+  grid-area: topFilter;
 
-.topFilter__content {
-  display: flex;
-  align-items: center;
+  
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 130px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  padding: 10px 0;
-  scrollbar-width: none;
 }
 
 .topFilter__paragraph {
@@ -66,45 +67,19 @@ h3 {
   justify-content: center;
   background-color: var(--color-tertiary);
   color: var(--color-principal);
+  padding: 7px 25px;
   border: none;
   border-radius: 5px;
   font-weight: 700;
+  margin: 10% 8%;
+  margin-left: 0px;
   cursor: pointer;
-  flex-shrink: 0;
-  padding: 10px 20px;
-  margin: 0 5px 0;
 }
 
 .topFilter__paragraph:hover {
   background-color: var(--color-principal);
   color: var(--white);
   border: none;
-}
-
-.topFilter__button {
-  cursor: pointer;
-  border: none;
-  padding: 150px 0;
-}
-
-.topFilter__button path{
-  fill: var(--color-principal);
-}
-
-.left-scroll,
-.right-scroll {
-  position: sticky;
-  top: 0;
-  background-color: var(--white);
-  cursor: pointer;
-}
-
-.left-scroll {
-  order: -1;
-}
-
-.right-scroll {
-  order: 1;
 }
 
 /* Media Query Mobile - Botón de filtro*/
@@ -132,13 +107,73 @@ h3 {
   height: 25px;
 }
 
+/* Media Query Mobile - Barra de filtro*/
+.product__container .filterBar {
+  grid-area: filterBar;
+}
+
+.filterBar {
+  display: none;
+  padding-left: 3%;
+}
+
+.filterBar--active{
+  display: flex;
+}
+
+
+
+.filterBar__subtitle {
+  padding: 6% 0 2%;
+}
+
+li {
+  list-style: none;
+}
+
+.filterBar__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+}
+
+/* Media Query Mobile - Botón barra de filtro*/
+.filterBar__button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-principal);
+  background-color: var(--color-tertiary);
+  padding: 13px 8px;
+  border: none;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filterBar__button:hover {
+  background-color: var(--color-secondary);
+  color: var(--white);
+  border-color: var(--color-secondary);
+}
+
+input {
+  margin-bottom: 7px;
+}
+
 /* Media Query Mobile - Tarjetas de producto */
+.product__container .productCard {
+  grid-area: productCard;
+}
+
 .productCard__container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   /* width: fit-content; */
-  gap: 20px;
+  gap: 40px;
 }
 
 .cardProduct{
@@ -147,8 +182,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 15px;
-  cursor: pointer;
 }
 .card__figure{
   width: 200px;
@@ -202,17 +235,25 @@ h3 {
 
   .productCard__container{
     grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 
 @media (min-width: 1024px) {
+  /* Media Query escritorio - Contenedor */
+  .product__container {
+    grid-template-areas:
+      "topFilter  topFilter"
+      "filterBar productCard";
+    grid-template-columns: 25% 75%;
+  }
   /* Media Query escritorio - Filtro superior */
   .topFilter {
     grid-auto-columns: 250px;
   }
 
   .topFilter__paragraph {
-    padding: 12px 55px;
+    padding: 10px 25px;
   }
   /* Media Query escritorio - Botón de filtro */
   .filterButton__container {
@@ -234,13 +275,20 @@ h3 {
 }
 
 @media (min-width: 1440px) {
+  /* Media Query escritorio 1440px - Contenedor */
+  .product__container {
+    grid-template-areas:
+      "topFilter  topFilter"
+      "filterBar productCard";
+    grid-template-columns: 20% 80%;
+  }
   /* Media Query escritorio 1440px - Filtro superior */
   .topFilter {
     grid-auto-columns: 350px;
   }
 
   .topFilter__paragraph {
-    padding: 13px 95px;
+    padding: 12px 25px;
   }
   /* Media Query escritorio 1440px - Tarjetas de producto */
   .productCard__subtitle {

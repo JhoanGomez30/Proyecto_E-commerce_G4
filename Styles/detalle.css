@@ -1,0 +1,13 @@
+.gallery__imgContainer{
+    background-image: url("../assets/img/imgProduct2.webp");
+    /* height: 300px; */
+    width: 100%;
+    background-color: #fff;
+
+
+    aspect-ratio: 846/1009;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
