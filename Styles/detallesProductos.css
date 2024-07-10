@@ -58,7 +58,7 @@ body {
 }
 
 .gallery__imgContainer{
-    background-image: url("../assets/img/imgProduct1.webp");
+    background-image: url("../assets/img/thumbnail1-model.webp");
     /* height: 300px; */
     width: 100%;
     background-color: #fff;
@@ -423,6 +423,10 @@ body {
         
     }
 
+    .showModal{
+        display: grid;
+    }
+
     .modalGallery{
         display: grid;
         grid-template-areas:
@@ -432,9 +436,9 @@ body {
        grid-template-columns:.8fr 3fr;
        gap: 2%;
 
-       width: 100%;
+       width: fit-content;
        height: 100%;
-       margin: 30px 0;
+       margin: 30px auto;
     }
     
     .modalGallery__imgContainer{
@@ -442,7 +446,7 @@ body {
 
         background-image: url("../assets/img/imgProduct1.webp");
         /* height: 446px; */
-        width: 446px;
+        width: 76vh;
         /* width: 100%; */
     
     
@@ -702,6 +706,16 @@ body {
         left: 80%;
       
     
+    }
+
+    .modalGallery__imgContainer{
+      
+        /* height: 446px; */
+        width: 446px;
+        /* width: 100%; */
+    
+    
+        
     }
 
 }
