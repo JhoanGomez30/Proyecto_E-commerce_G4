@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --white: #fff;
+  --color-secondary: #3366cc;
+  --color-principal: #004884;
+  --color-tertiary: #e6effd;
+  --color-quaternary: #ff9019;
+  --color-quinary: #7f00b2;
+  --color-senary: #d0a3e1;
+  --color-novenary: #a833b9;
+
+  --padding-container: 48px 0;
+  --padding-container-mobile: 24px 0;
+}
+
+body {
+  font-family: var(--font-open-sans);
+  font-size: 1rem;
+  background-color: var(--color-principal1);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--padding-container-mobile);
+}
+
+h3 {
+  font-family: var(--font-poppins);
+}
+
+/* Media Query */
+/* ////////////////////////// */
+#cart.cart.container{
+  padding: 0;
+}
+
+h1{
+  padding: 30px 0 0 0;
+  font-size: 28px;
+  margin: 0;
+  font-family: var(--font-poppins);
+}
+
+h2{
+  font-size: .9rem;
+  color: var(--color-principal);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--font-poppins);
+  padding: 3px 0 0 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img {
+  width: 70px;
+  border-radius: 5px;
+}
+
+#cart table svg:hover{
+  /* fill: rgba(162, 6, 6, 0.798); */
+  cursor: pointer;
+}
+
+#cart table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+  font-family: var(--font-poppins);
+}
+
+#cart table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+  font-family: var(--font-poppins);
+}
+
+#cart table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+  font-family: var(--font-poppins);
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+  font-family: var(--font-poppins);
+}
+
+#cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+  border: 1px solid #bfc5be;
+}
+
+#cart table thead {
+  border: 1px solid #e2e9e1;
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 18px 0;
+}
+
+#cart table tbody tr td {
+  padding-top: 15px;
+}
+
+#cart table tbody td {
+  font-size: 14px;
+}
+
+#cartAdd {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  padding-bottom: 15px;
+}
+
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button {
+  background-color: var(--color-principal);
+  color: var(--white);
+  padding: 12px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#coupon button:hover,
+#subtotal button:hover{
+  background-color:var(--color-secondary) ;
+  color: var(--white);
+  border-color: var(--color-secondary);
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding: 30px;
+}
+
+.subtotal__text {
+  font-weight: 700;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e2e9e1;
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+.tablet-cart {
+  display: none;
+}
+
+.tablet-cart-item {
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+}
+
+.item-info {
+  margin-left: 10px;
+}
+
+.remove-item {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.mobile-cart {
+  display: none;
+}
+
+@media(max-width:768px){
+  #cart.cart.container{
+    padding: 30px;
+  }
+
+  h1{
+    font-size: 23px;
+    padding: 3px 0 0 0;
+  }
+  
+  #cartAdd {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  #coupon {
+    width: 100%;
+  }
+
+  #subtotal {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .table-responsive {
+    display: none;
+  }
+
+  .tablet-cart {
+    display: block;
+  }
+
+  .mobile-cart {
+    display: none;
+  }
+
+  .item-info {
+    margin: 5px 25px;
+  }
+
+  .item-details img {
+    width: 100px;
+    height: auto;
+  }
+
+  .item-details{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 16% 56% 15% 13%
+  } 
+
+  .tablet-cart-item {
+    padding: 0;
+  }
+
+  .iconDelete__tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__img {
+    border-radius: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px 3px 8px 13px;
+    border: 1px solid #bfc5be;
+  }
+  
+  .input__minus, .input__plus {
+    width: 12px !important;
+    height: auto !important;
+    cursor: pointer;
+  }
+  
+  .input__minus {
+    padding-bottom: 3.5px;
+  }
+  
+  .input__number {
+    width: 40px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2px;
+    border: none;
+    font-weight: 700;
+  }  
+}
+
+@media(max-width: 320px){
+  .item-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 30% 60% 10%;
+  }
+
+  #cart.cart.container{
+    padding: 16px;
+  }
+
+  .tablet-cart {
+    display: none;
+  }
+
+  .mobile-cart {
+    display: block;
+  }
+  
+  h1{
+    font-size: 20px;
+  }
+  
+  .h3__info, .p__info{
+    font-size: 15px;
+    padding: 2px 0;
+  }
+
+  .input .iconDelete__mobile{
+    padding: 2px 0;
+  }
+
+  .item-info {
+    margin: 0 0 0 20px;
+  }
+
+  #cartAdd {
+    padding: 16px;
+  }
+
+  #coupon input {
+    width: 100%;
+  }
+
+  #coupon button.normal {
+    margin-top: 15px;
+  }
+
+  .iconDelete__mobile {
+    margin: 0 auto;
+  }
+
+  .item-details img {
+    width: 80px;
+    height: auto;
+  }
+
+  #cartAdd table td:nth-child(1) {
+    width: 40%;
+  }
+
+  #cartAdd table td:nth-child(2) {
+    width: 60%;
+  }
+
+}

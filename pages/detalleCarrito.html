@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto</title>
+  <title>Carrito de Compras</title>
   <link rel="shortcut icon" href="../assets/iconos/Corona - Fit Emporium - Blanco.png">
   <link rel="stylesheet" href="../Styles/normalize.css" />
-  <link rel="stylesheet" href="../Styles/contact.css" />
+  <link rel="stylesheet" href="../Styles/detalleCarrito.css" />
+  <!-- <link rel="stylesheet" href="../Styles/detallesProductos.css" /> -->
   <link rel="stylesheet" href="../Styles/nosotros.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,66 +66,129 @@
       </nav>
     </div>
   </header>
-  <!-- Inicio contacto -->
-  <main class="contact">
-    <div class="contact__container container">
-      <div class="contact__content">
-        <!-- Inicio contacto texto -->
-        <div class="contact__text">
-          <h1 class="contact__title">Contáctanos</h1>
-          <p class="contact_paragraph">
-            Si tienes alguna pregunta, comentario o sugerencia, por favor no
-            dudes en ponerte en contacto con nosotros. Completa el formulario
-            a continuación y nos pondremos en contacto contigo.
-          </p>
-        </div>
-        <!-- Fin contacto texto -->
-        <!-- Inicio contacto formulario -->
-        <div class="contact__form">
-          <form action="https://formspree.io/f/mzbnqwwj" method="POST" class="form__container" id="formulario">
-            <!-- Inicio input nombre -->
-            <div class="contact__group">
-              <input type="text" id="name" name="name" class="contact__input" placeholder=" " required />
-              <label for="name" class="contact__label">Ingresa tu nombre</label>
-              <span class="contact__line" id="name__group"></span>
-          </div>
-          <!-- Fin input nombre -->
-          <!-- Inicio input email -->
-          <div class="contact__group">
-              <input type="email" id="email" name="email" class="contact__input" placeholder=" " required />
-              <label for="email" class="contact__label">Ingresa tu correo electrónico</label>
-              <span class="contact__line" id="email__group"></span>
-          </div>
-          <!-- Fin input email -->
-          <!-- Inicio input teléfono -->
-          <div class="contact__group">
-              <input type="tel" id="tel" name="tel" class="contact__input" placeholder=" " required />
-              <label for="tel" class="contact__label">Ingresa tu teléfono</label>
-              <span class="contact__line" id="tel__group"></span>
-          </div>
-          <!-- Fin input teléfono -->
-          <!-- Inicio input mensaje -->
-          <div class="contact__group">
-              <input type="text" id="message" name="message" class="contact__input" placeholder=" "
-                  required />
-              <label for="message" class="contact__label">Déjanos tu mensaje</label>
-              <span class="contact__line" id="message__group"></span>
-          </div>
-          <!-- Inicio botón -->
-          <input type="submit" name="btn__send" id="btn__send" class="contact__submit" value="Enviar" disabled="true"/>
-          <!-- Fin botón -->
-          </form>
-        </div>
-        <!-- Fin contacto formulario -->
-      </div>
-      <!-- Inicio imagen -->
-      <figure class="contact__figure">
-        <img src="../assets/img/img__contact.webp" alt="" class="contact__img" />
-      </figure>
-      <!-- Fin imagen -->
+  <!-- Inicio detalle carrito -->
+  <section id="cart" class="cart container">
+    <h1>Carrito de Compras</h1>
+    <h2>Resumen</h2>
+    <!-- Inicio vista escritorio -->
+    <div class="table-responsive">
+    <table class="cart__table">
+        <thead class="cart__thead">
+            <tr class="cart__tr">
+                <td class="cart__td">Eliminar</td>
+                <td class="cart__td">Imagen</td>
+                <td class="cart__td">Producto</td>
+                <td class="cart__td">Precio</td>
+                <td class="cart__td">Cantidad</td>
+                <td class="cart__td">Subtotal</td>
+            </tr>
+        </thead>
+        <tbody class="cart__tbody">
+            <tr class="cart__tr">
+                <td class="cart__td"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg></td>
+                <td class="cart__td"><img src="../assets/img/imgProduct6.webp" alt="foto" class="card__img"></td>
+                <td class="cart__td">SLEEVE T-SHIRT</td>
+                <td class="cart__td">$120.000 COP</td>
+                <td class="cart__td"><input type="number" value="1"></td>
+                <td class="cart__td">$120.000 COP</td>
+            </tr>
+            <tr class="cart__tr">
+                <td class="cart__td"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg></td>
+                <td class="cart__td"><img src="../assets/img/imgProduct7.webp" alt="foto" class="card__img"></td>
+                <td class="cart__td">MESH TANK</td>
+                <td class="cart__td">$65.000 COP</td>
+                <td class="cart__td"><input type="number" value="1"></td>
+                <td class="cart__td">$65.000 COP</td>
+            </tr>
+            <tr class="cart__tr">
+                <td class="cart__td"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg></td>
+                <td class="cart__td"><img src="../assets/img/imgProduct9.webp" alt="foto" class="card__img"></td>
+                <td class="cart__td">CREST OVERSIZED HOODIE</td>
+                <td class="cart__td">$155.000 COP</td>
+                <td class="cart__td"><input type="number" value="1"></td>
+                <td class="cart__td">$155.000 COP</td>
+            </tr>
+        </tbody>
+    </table>
     </div>
-  </main>
+    <!-- Fin vista escritorio -->
+    <!-- Inicio vista en formato de lista para tablet -->
+    <div class="tablet-cart">
+        <div class="tablet-cart-item">
+          <div class="item-details">
+            <img src="../assets/img/imgProduct6.webp" alt="foto" class="card__img">
+            <div class="item-info">
+                <h3>SLEEVE T-SHIRT</h3>
+                <!-- <p>Precio: $120.000 COP</p> -->
+                <div class="subtotal__input">
+                    <p>$120.000 COP</p>
+                </div>
+            </div>
+            <div class="input">
+                <img src="../assets/iconos/icon-minus.svg" alt="minus" class="input__minus">
+                <input class="input__number" type="text" value="0">
+                <img src="../assets/iconos/icon-plus.svg" alt="plus" class="input__plus">
+            </div>
+            <figure class="iconDelete__tablet"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg></td></figure>
+          </div>
+        </div>
+        <!-- Más elementos según sea necesario -->
+      </div>
+      <!-- Fin vista en formato de lista para tablet -->
 
+      <!-- Inicio vista en formato de lista para mobile -->
+    <div class="mobile-cart">
+        <div class="mobile-cart-item">
+          <div class="item-details">
+            <img src="../assets/img/imgProduct6.webp" alt="foto" class="card__img">
+            <div class="item-info">
+                <h3 class="h3__info">SLEEVE T-SHIRT T OTRA PALABRA MÁS PALABRAS</h3>
+                <!-- <p>Precio: $120.000 COP</p> -->
+                <div class="subtotal__input">
+                    <p class="p__info">$120.000 COP</p>
+                </div>
+                <div class="input">
+                    <img src="../assets/iconos/icon-minus.svg" alt="minus" class="input__minus">
+                    <input class="input__number" type="text" value="0">
+                    <img src="../assets/iconos/icon-plus.svg" alt="plus" class="input__plus">
+                </div>
+            </div>
+            <figure class="iconDelete__mobile"><svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg></td></figure>
+          </div>
+        </div>
+      </div>
+      <!-- Fin vista en formato de lista para mobile -->
+  </section>
+
+  <section id="cartAdd" class="cartAdd container">
+    <div id="coupon" class="coupon">
+        <h3>Aplicar cupón</h3>
+        <div>
+            <input type="text" placeholder="Ingresa tu cupón">
+            <button class="normal">Aplicar</button>
+        </div>
+    </div>
+
+    <div id="subtotal" class="subtotal">
+        <h3>Total Carrito</h3>
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$340.000 COP</td>
+            </tr>
+            <tr>
+                <td>Envío</td>
+                <td>Gratis</td>
+            </tr>
+            <tr class="subtotal__text">
+                <td>Total</td>
+                <td>$340.000 COP</td>
+            </tr>
+        </table>
+        <button id="normal" class="normal">Finalizar compra</button>
+    </div>
+  </section>
+  <!-- Fin detalle carrito -->
 
   <!-- Inicio Footer Miguel Angel -->
 
@@ -334,9 +398,10 @@
 </footer>
 
 <!-- Fin Footer Miguel Angel -->
-  <!-- Fin contacto -->
+
   <script src="../js/app.js" defer ></script>
   <script src="../js/nav.js" defer ></script>
+  <script src="../js/detallesProducto.js" defer ></script>
 </body>
 
 </html>

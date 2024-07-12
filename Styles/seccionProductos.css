@@ -59,6 +59,7 @@ h3 {
   overscroll-behavior-inline: contain;
   padding: 10px 0;
   scrollbar-width: none;
+  /* white-space: nowrap; */
 }
 
 .topFilter__paragraph {
