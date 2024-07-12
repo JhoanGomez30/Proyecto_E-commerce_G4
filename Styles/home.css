@@ -91,6 +91,11 @@
 }
 /* Fin hero main */
 
+/* Inicio productos destacados */
+h2{
+    padding: 10px 0;
+}
+/* Fin productos destacados */
 
 @media(min-width:768px){
     .main{
