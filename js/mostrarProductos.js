@@ -3,6 +3,11 @@ import { conexionAPI } from "./conexionAPI.js";
 
 
 const productosContainer = document.querySelector("[data-productos]");
+const filtersTop=document.querySelector(".topFilter__content");
+const todoBtn = document.querySelector("#todo");
+let listaAPI=[];
+
+
 
 function crearCard(nombre, valorUnitario, imagen, id_producto){
     const producto = document.createElement("div");
@@ -44,15 +49,50 @@ function crearCard(nombre, valorUnitario, imagen, id_producto){
 async function listarProductos(){
 
   try{
-    const listaAPI= await conexionAPI.listarProductos();
+     listaAPI= await conexionAPI.listarProductos();
+     
 
-    listaAPI.forEach(({nombre, valorUnitario, imagen, id_producto}) => productosContainer.appendChild(crearCard(nombre, valorUnitario, imagen, id_producto)));
+    // listaAPI.forEach(({nombre, valorUnitario, imagen, id_producto}) => productosContainer.appendChild(crearCard(nombre, valorUnitario, imagen, id_producto)));
+    mostrarProductos(listaAPI);
+
+    
   }catch{
-    contenedorMensajeError.innerHTML=` <h1 class="productCard__error">Ha ocurrido un problema con la conexión</h3>
+    productosContainer.innerHTML=` <h1 class="productCard__error">Ha ocurrido un problema con la conexión</h3>
 
     `
   }
 
 }
 
+function mostrarProductos(listaAPI){
+  productosContainer.innerHTML=``;
+  listaAPI.forEach(({nombre, valorUnitario, imagen, id_producto}) => productosContainer.appendChild(crearCard(nombre, valorUnitario, imagen, id_producto)));
+}
+
+
+filtersTop.addEventListener("click", (e)=>{
+  const categoria= e.target.dataset.categoria;
+
+  
+  if(categoria){
+    const productosFiltrados = listaAPI.filter(producto => producto.categoria === categoria);
+    
+    
+    
+    mostrarProductos(productosFiltrados);
+    return;
+  }
+
+ 
+
+})
+
+todoBtn.addEventListener("click", ()=>{
+  mostrarProductos(listaAPI);
+  console.log(listaAPI);
+})
+
+// todosBtn.addEventListener("click", ()=>{
+//   console.log(listaAPI);
+// })
 listarProductos();
