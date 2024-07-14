@@ -1,0 +1,83 @@
+{
+  "productos": [
+    {
+      "nombre": "CROP MESH TANK",
+      "valorUnitario": 450.000,
+      "imagen": "../assets/img/imgProduct2.webp",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "BLUR SEAMLESS SHORTS",
+      "valorUnitario": 550000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/BlurSeamlessShortGSIrisBlue_GSPowderedLilacB9A2D-UCVV_1664x.jpg?v=1717571493",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "BLUR SEAMLESS BRALETTE",
+      "valorUnitario": 550000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/BlurSeamlessLowBraletteGSIrisBlue_GSPowderedLilacB9A2F-UCVV1_384x.jpg?v=1717571493",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "VITAL SEAMLESS 2.0 V ",
+      "valorUnitario": 450000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/VitalSeamlessSportsBraAwBlackMarlBlackMarlB3A4K-BBF3-1311_9b149b64-3f1a-4d14-af56-4e23de969d99_1664x.jpg?v=1702281430",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "VITAL SEAMLESS 1.0 V",
+      "valorUnitario": 470000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/VitalSeamlessSportsBraAwBrightFuchsia-MarlB3A4K-KBM5.81_2538fca1-1bd1-4b74-ad18-4b8d026d2266_1664x.jpg?v=1686821446",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "FRACTION SPORTS BRA",
+      "valorUnitario": 465000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/products/GfxFractionSportsBraWhiteB3A6Y-WBBM-0902.92_5f6561a4-4a84-425e-9e40-cec23185c2cd_1664x.jpg?v=1674463026",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "FRACTION SPORTS BRA",
+      "valorUnitario": 460000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/products/GfxFractionSportsBraWhiteB3A6Y-WBBM-0902.92_5f6561a4-4a84-425e-9e40-cec23185c2cd_1664x.jpg?v=1674463026",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "SWEAT SEAMLESS",
+      "valorUnitario": 600000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/SweatSeamlessLonglineSportsBraGSWashedStoneBrownB4A5B-NBY51186_5e70d935-d009-4c11-b84f-55440590efb8_1664x.jpg?v=1701441715",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "SWEAT SEAMLESS",
+      "valorUnitario": 200000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/SweatSeamlessLonglineBraBlack-B4A5B-BBBB-0552.50_8990e9d1-583f-4d99-99a1-c27cd5cc3d11_1664x.jpg?v=1702639262",
+      "stock": 5,
+      "categoria": "mujer",
+      "descripcion": "whatever"
+    },
+    {
+      "nombre": "HALTERNECK CROP",
+      "valorUnitario": 40000,
+      "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/HalterneckCropCamiTankGSWhiteB7A1A-WB57-1920_384x.jpg?v=1711444375",
+      "descripcion": "Whatever",
+      "categoria":"mujer"
+    }
+  ]
+}
