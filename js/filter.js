@@ -1,7 +1,7 @@
-// function toggleFilterBar() {
-//   let filterBar = document.querySelector(".filterBar");
-//  filterBar.classList.toggle("filterBar--active")
-// }
+function toggleFilterBar() {
+  let filterBar = document.querySelector(".filterBar");
+ filterBar.classList.toggle("filterBar--active")
+}
 
 // document.addEventListener("DOMContentLoaded", function() {
 //   const leftScrollButton = document.querySelector('.left-scroll');
