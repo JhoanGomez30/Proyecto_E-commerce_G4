@@ -84,6 +84,7 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
+    object-fit: cover;
 }
 
 .gallery__next{
@@ -95,6 +96,7 @@ body {
     position: absolute;
     top: 50%;
     right: 0;
+    object-fit: cover;
 }
 
 .gallery__thumbnails{
@@ -126,14 +128,14 @@ body {
 }
 
 .details__before{
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     text-decoration: line-through;
     font-weight: 700;
 }
 
 .details__now{
     color: var(--color-secondary);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
@@ -282,7 +284,38 @@ body {
     
 }
 
-
+.filterBar__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    justify-items: center;
+    margin-top: 5%;
+    width: 80%;
+  }
+  
+  /* Media Query Mobile - Botón barra de filtro*/
+  .filterBar__button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-principal);
+    background-color: var(--color-tertiary);
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 40px    
+  }
+  
+  .filterBar__button:hover {
+    background-color: var(--color-secondary);
+    color: var(--white);
+    border-color: var(--color-secondary);
+  }
 
 
 @media(min-width:768px){
@@ -334,6 +367,8 @@ body {
         border-radius: 10px;
         cursor: pointer;
         transition: border-width .1s ease-in-out;
+        object-fit: cover;
+        object-position: top;
     }
 
     .gallery__thumbnail:hover{
@@ -348,8 +383,8 @@ body {
     }
 
     .details__title{
-        margin-bottom: 4%;
-        font-size: 1.7rem ;
+        margin-bottom: 2%;
+        font-size: 1.3rem ;
     }
 
     .card__startPoints--details{
@@ -365,13 +400,14 @@ body {
     }
 
     .details__description{
-        font-size: .8rem;
-        margin-top: 3%;
-        margin-bottom: 5%;
+        font-size: 0.85rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        line-height: 23.5px;
     }
 
     .details__prices{
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
 
 
@@ -389,7 +425,7 @@ body {
         width: 20%;
         height: 100%;
         border: none;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 700;
         font-family: var(--font-open-sans);
         text-align: center;
@@ -404,7 +440,7 @@ body {
         width: fit-content;
         height: fit-content;
         padding: 12px 16px;
-
+        font-size: 0.72rem;
     }
 
     .cartModal{
@@ -464,6 +500,7 @@ body {
     .modalGallery__imgContainer:hover .modalGallery__next {
         cursor: pointer;
         display: block;
+        object-fit: cover;
     }
     
     .modalGallery__previous{
@@ -505,6 +542,8 @@ body {
         border-radius: 10px;
         cursor: pointer;
         transition: border-width .1s ease-in-out;
+        object-fit: cover;
+        object-position: top;
     }
 
     .modalGallery__thumbnail:hover{
@@ -524,19 +563,35 @@ body {
         cursor: pointer;
         content: url("../assets/iconos/icon-close-hover.svg");
     }
+
+    .filterBar__buttons {
+        grid-template-columns: repeat(7, 1fr);
+        margin-top: 1%;
+    }
+
+    .filterBar__button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .filterBar__subtitle {
+        font-size: 1rem;
+    }
 }
 
 @media(min-width:820px){
     .details__title{
-        font-size: 2rem ;
+        font-size: 1.5rem ;
     }
     
-
+    .details__button{
+        font-size: 1.2rem;
+    }
 }
 
 @media(min-width:850px){
     .details__title{
-        font-size: 2rem ;
+        font-size: 1.8rem ;
     }
     .card__startPoint--details{
         width: 6%;
@@ -548,11 +603,15 @@ body {
        
     }
 
+    .details__title{
+        font-size: 1.5rem ;
+    }
+
 }
 
 @media(min-width:900px){
     .details__title{
-        font-size: 2.5rem ;
+        font-size: 1.6rem ;
     }
     .card__startPoint--details{
         width: 6%;
@@ -566,7 +625,7 @@ body {
        
     }
     .details__productQuantity{
-        margin-top: 8%;
+        margin-top: 2%;
     }
 
       
@@ -576,12 +635,12 @@ body {
     }
 
     .details__before{
-        font-size: 2.2rem;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 
     .details__now{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
 }
@@ -590,8 +649,8 @@ body {
 
 @media(min-width:1000px){
     .details__description{
-        font-size: 1.3rem;
-       line-height: 25px;
+        font-size: 1.2rem;
+        line-height: 32px;
     }
 
     .cartModal{
@@ -601,15 +660,35 @@ body {
     
     }
 
+    .filterBar__button {
+        height: 45px;
+        width: 45px;
+    }
+
+    .details__button{
+        font-size: 0.9rem;
+    }
+
+    .details__title{
+        font-size: 1.75rem ;
+    }
+
+    .details__prices{
+        margin: 6% 0;
+    }
+
+    .input {
+        margin: 1.2% 0;
+    }
 }
 
 @media(min-width:1100px){
 
     .details__title{
-        font-size: 2.7rem ;
+        font-size: 1.93rem ;
     }
     .details__description{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
        
     }
 
@@ -619,12 +698,22 @@ body {
   
 
     .details__button{
-        margin-top: 4%;
+        margin-top: 3%;
         width: fit-content;
         height: fit-content;
-        
+        font-size: 0.9rem;
         padding: 3.9% 5.2%;
 
+    }
+
+    .filterBar__button {
+        height: 53px;
+        width: 53px;
+        font-size: 15px;
+    }
+
+    .filterBar__buttons {
+        width: 50%;
     }
 
 }
@@ -632,43 +721,71 @@ body {
 @media(min-width:1210px){
 
      .details__title{
-        font-size: 3rem ;
+        font-size: 2.2rem ;
     }
     .details__description{
-        font-size: 1.45rem;
-        line-height: 36px;
-       
+        font-size: 1.25rem;
+        line-height: 43px;
     }
 
     .details__before{
-        font-size: 2.6rem;
+        font-size: 1.8rem;
         font-weight: 700;
     }
 
     .details__now{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
- 
+    .details__button{
+        margin: 5% 0;
+        font-size: 1rem;
+    }
+
+    .filterBar__buttons {
+        margin-top: 2%;
+    }
 
 }
 
 @media(min-width:1310px){
     
+    .details__title{
+        font-size: 2.3rem;
+    }
+
     .details__description{
-        font-size: 1.45rem;
+        font-size: 1.3rem;
         line-height: 40px;
-       
+    }
+
+    .details__button{
+        font-size: 1rem;
+    }
+
+    .input__number{
+        font-size: 1.5rem;
+    }
+
+    .filterBar__button {
+        height: 55px;
+        width: 55px;
+        font-size: 1rem;
+        margin-bottom: 25%;
+    }
+
+    .filterBar__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .details__prices{
+        margin: 6% 0;
     }
 }
+
 @media(min-width:1349px){
     .details__title{
-        font-size: 3.5rem ;
-    }
-    .details__description{
-        font-size: 1.6rem;
-        line-height: 42px;
-       
+        font-size: 2.48rem ;
     }
     
 
@@ -677,27 +794,31 @@ body {
     
     
     .details__title{
-        font-size: 3.5rem ;
+        font-size: 2.44rem ;
     }
     .details__description{
-        font-size: 1.7rem;
-        line-height: 44px;
+        margin-top: 5%;
        
     }
 
     .details__before{
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
 
     .details__now{
-        font-size: 2.6rem;
+        font-size: 2rem;
     }
 }
 
 @media(min-width:1440px){
+    
+    .details__title {
+        font-size: 2.7rem;
+    }
+
     .details__description{
-        
-        line-height: 48px;
+        font-size: 1.5rem;
+        line-height: 40px;
        
     }
 
@@ -716,6 +837,18 @@ body {
     
     
         
+    }
+
+    .filterBar__buttons {
+        width: 50%;
+    }
+
+    .details__prices{
+        margin: 3% 0;
+    }
+
+    .input {
+        margin: 0.39% 0;
     }
 
 }
