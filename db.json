@@ -78,6 +78,51 @@
       "imagen": "https://cdn.shopify.com/s/files/1/1367/5207/files/HalterneckCropCamiTankGSWhiteB7A1A-WB57-1920_384x.jpg?v=1711444375",
       "descripcion": "Whatever",
       "categoria":"mujer"
+    },
+
+    {
+      "nombre": "Barras Paralelas",
+      "valorUnitario": 400000,
+      "imagen": "https://m.media-amazon.com/images/I/61nYqvKHEsL._AC_SL1500_.jpg",
+      "descripcion": "Whatever",
+      "categoria":"calistenia",
+      "stock": 14
+    },
+    {
+      "nombre": "Barra de Dominadas",
+      "valorUnitario": 369000,
+      "imagen": "https://m.media-amazon.com/images/I/61zZYbSPphL._AC_SL1500_.jpg",
+      "descripcion": "Whatever",
+      "categoria":"calistenia",
+      "stock": 14
+
+    },
+    {
+      "nombre": "MiniParalelas",
+      "valorUnitario": 400000,
+      "imagen": "https://m.media-amazon.com/images/I/71PMP5qFWQL._AC_SL1500_.jpg",
+      "descripcion": "Whatever",
+      "categoria":"calistenia",
+      "stock": 14
+
+    },
+    {
+      "nombre": "Banda Elastica 25kg",
+      "valorUnitario": 75000,
+      "imagen": "https://contents.mediadecathlon.com/p2572858/k$0619708bb58eae9f41c40f48d408e276/elastico-cross-training-musculacion-training-band-25-kg.jpg?format=auto&quality=40&f=800x800",
+      "descripcion": "Whatever",
+      "categoria":"calistenia",
+      "stock": 14
+
+    },
+    {
+      "nombre": "Banda Elastica 35kg",
+      "valorUnitario": 90000,
+      "imagen": "https://contents.mediadecathlon.com/p2572820/k$d92f40274e0975380e0c41f224ae9c5c/elastico-cross-training-musculacion-training-band-35-kg.jpg?format=auto&quality=40&f=800x800",
+      "descripcion": "Whatever",
+      "categoria":"calistenia",
+      "stock": 14
+
     }
   ]
 }
