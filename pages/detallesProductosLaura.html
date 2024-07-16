@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Styles/normalize.css" />
     <link rel="stylesheet" href="../Styles/nosotros.css" />
-    <link rel="stylesheet" href="../Styles/home.css" />
-    <link rel="stylesheet" href="../Styles/seccionPreguntas.css" />
+    <link rel="stylesheet" href="../Styles/detallesProductosLaura.css" />
     <link rel="stylesheet" href="../Styles/seccionProductos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,10 +20,12 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Fit Emporium</title>
-    <link rel="shortcut icon" href="../assets/iconos/Corona - Fit Emporium - Blanco.png">
+    <title>Detalles del producto</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/iconos/Corona - Fit Emporium - Blanco.png"
+    />
   </head>
-
   <body>
     <header class="header">
       <div class="header__container container">
@@ -152,9 +153,7 @@
                 </g>
               </g>
               <g fill="#000000" fill-opacity="1">
-                <g transform="translate(161.078297, 150.902232)">
-                  <g />
-                </g>
+                <g transform="translate(161.078297, 150.902232)"><g /></g>
               </g>
               <g fill="#000000" fill-opacity="1">
                 <g transform="translate(167.881374, 150.902232)">
@@ -259,10 +258,10 @@
                 d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
               ></path>
             </svg>
-            <a href="./index.html" class="nav__link">Inicio</a>
-            <a href="./pages/productos.html" class="nav__link">Productos</a>
-            <a href="./pages/nosotros.html" class="nav__link">Nosotros</a>
-            <a href="./pages/contact.html" class="nav__link">Contacto</a>
+            <a href="../index.html" class="nav__link">Inicio</a>
+            <a href="productos.html" class="nav__link">Productos</a>
+            <a href="nosotros.html" class="nav__link">Nosotros</a>
+            <a href="contact.html" class="nav__link">Contacto</a>
           </div>
           <figure class="header__icons">
             <svg
@@ -277,18 +276,21 @@
                 d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
               ></path>
             </svg>
-            <svg
-              class="header__cart"
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#000000"
-            >
-              <path
-                d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"
-              />
-            </svg>
+            <div class="header__cart--container">
+              <div class="header__cart--notification">0</div>
+              <svg
+                class="header__cart"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"
+                />
+              </svg>
+            </div>
 
             <div class="header__menu--container">
               <img
@@ -303,31 +305,207 @@
       </div>
     </header>
 
-    <main class="main">
-      <div class="main__container container">
-        <div class="main__heroText">
-          <h1 class="main__title--home">
-            Tu tienda de confianza, <span class="main__span">FIT EMPORIUM</span>
-          </h1>
-          <p class="main__paragraph">
-            Tu destino único para todo lo relacionado con el fitness y el
-            entrenamiento en casa. Desde las últimas tendencias en moda
-            deportiva hasta equipos de alta calidad y una amplia gama de
-            suplementos.
+    <!-- <button id="logoutBtn">Cerrar sesión</button> -->
+
+    <!-- Inicio detalles del producto -->
+    <main class="detailProduct">
+      <div class="detailProduct__container container">
+        <article class="gallery">
+          <div class="gallery__imgContainer">
+            <img
+              src="../assets/iconos/icon-previous.svg"
+              alt="flecha atras"
+              class="gallery__previous"
+            />
+            <img
+              src="../assets/iconos/icon-next.svg"
+              alt="flecha delante"
+              class="gallery__next"
+            />
+          </div>
+          <div class="gallery__thumbnails">
+            <img
+              id="1"
+              src="../assets/img/thumbnail3-model.webp"
+              alt="thumbnail"
+              class="gallery__thumbnail"
+            />
+            <img
+              id="2"
+              src="../assets/img/thumbnail4-model.webp"
+              alt="thumbnail"
+              class="gallery__thumbnail"
+            />
+            <img
+              id="3"
+              src="../assets/img/thumbnail5-model.webp"
+              alt="thumbnail"
+              class="gallery__thumbnail"
+            />
+            <img
+              id="4"
+              src="../assets/img/thumbnail2-model.webp"
+              alt="thumbnail"
+              class="gallery__thumbnail"
+            />
+          </div>
+        </article>
+        <article class="details">
+          <h2 class="details__title">Fall limited Edition Sneakers</h2>
+          <span class="card__startPoints--details">
+            <img
+              class="card__startPoint--details"
+              src="../assets/iconos/start-bold.svg"
+              alt="estrella rellenada"
+            />
+            <img
+              class="card__startPoint--details"
+              src="../assets/iconos/start-bold.svg"
+              alt="estrella rellenada"
+            />
+            <img
+              class="card__startPoint--details"
+              src="../assets/iconos/start-bold.svg"
+              alt="estrella rellenada"
+            />
+            <img
+              class="card__startPoint--details"
+              src="../assets/iconos/start-bold.svg"
+              alt="estrella rellenada"
+            />
+            <img
+              class="card__startPoint--details"
+              src="../assets/iconos/start.svg"
+              alt="estrella sin rellenar"
+            />
+          </span>
+          <p class="details__description">
+            Este top es tu compañero perfecto para el día a día. Confeccionado
+            con tela transpirable y flexible, te ofrecerá comodidad y estilo en
+            cualquier ocasión.
           </p>
-          <a href="../pages/registrarse.html" class="main__cta">Regístrate</a>
-        </div>
-        <figure class="main__figure">
-          <img src="../assets/img/img__hero.png" alt="foto" class="main__img" />
-          <div class="main__elipse"></div>
-        </figure>
+
+          <div class="details__prices">
+            <p class="details__before">$350.000</p>
+            <p class="details__now">$150.000</p>
+          </div>
+
+          <div class="filterBar__sizes">
+            <h3 class="filterBar__subtitle">Escoge tu talla</h3>
+            <div class="filterBar__buttons">
+              <button class="filterBar__button">XXS</button>
+              <button class="filterBar__button">XS</button>
+              <button class="filterBar__button">S</button>
+              <button class="filterBar__button">M</button>
+              <button class="filterBar__button">L</button>
+              <button class="filterBar__button">XL</button>
+              <button class="filterBar__button">XXL</button>
+            </div>
+          </div>
+
+          <div class="details__productQuantity">
+            <div class="input">
+              <img
+                src="../assets/iconos/icon-minus.svg"
+                alt="minus"
+                class="input__minus"
+              />
+              <input class="input__number" type="text" value="0" />
+              <img
+                src="../assets/iconos/icon-plus.svg"
+                alt="plus"
+                class="input__plus"
+              />
+            </div>
+
+            <button class="details__button">Agregar al carrito</button>
+          </div>
+        </article>
       </div>
     </main>
+    <!-- Fin detalles del producto -->
 
-    <!-- Inicio sección de productos destacados-->
+    <!-- Inicio cart modal -->
+    <div class="cartModal container">
+      <p class="cartModal__title">Carrito</p>
+      <div class="cartModal__checkout">
+        <div class="cartModal__details">
+          <img
+            class="cartModal__img"
+            src="../assets/img/thumbnail1-model.webp"
+            alt="thumbnail"
+          />
+          <div class="cartModal__productContainer">
+            <p class="cartModal__productName">Autum Limited Edition...</p>
+            <p class="cartModal__price">
+              $125.00 x3 <span class="cartModal__priceTotal">$375.00</span>
+            </p>
+          </div>
+          <img
+            src="../assets/iconos/icon-delete.svg"
+            alt="delete"
+            class="cartModal__iconDelete"
+          />
+        </div>
+        <button class="cartModal__button">Ver compra</button>
+      </div>
+    </div>
+    <!-- Fin cart modal -->
+
+    <!-- Inicio gallery modal -->
+
+    <div class="modalGallery__background">
+      <article class="modalGallery">
+        <img
+          src="../assets/iconos/icon-close.svg"
+          alt="close"
+          class="modalGallery__iconClose"
+        />
+        <div class="modalGallery__imgContainer">
+          <img
+            src="../assets/iconos/icon-previous.svg"
+            alt="flecha atras"
+            class="modalGallery__previous"
+          />
+          <img
+            src="../assets/iconos/icon-next.svg"
+            alt="flecha delante"
+            class="modalGallery__next"
+          />
+        </div>
+        <div class="modalGallery__thumbnails">
+          <img
+            id="m1"
+            src="../assets/img/thumbnail3-model.webp"
+            alt="thumbnail"
+            class="modalGallery__thumbnail"
+          />
+          <img
+            id="m2"
+            src="../assets/img/thumbnail4-model.webp"
+            alt="thumbnail"
+            class="modalGallery__thumbnail"
+          />
+          <img
+            id="m3"
+            src="../assets/img/thumbnail5-model.webp"
+            alt="thumbnail"
+            class="modalGallery__thumbnail"
+          />
+          <img
+            id="m4"
+            src="../assets/img/thumbnail2-model.webp"
+            alt="thumbnail"
+            class="modalGallery__thumbnail"
+          />
+        </div>
+      </article>
+    </div>
+    <!-- Fin gallery modal -->
+
+    <!-- Inicio sección productos-->
     <div class="product__container container" data-productos>
       <!-- Inicio productos-->
-      <h2 class="product__title">Productos destacados</h2>
       <div class="topFilter">
         <button class="topFilter__button left-scroll">
           <svg
@@ -1125,96 +1303,7 @@
       </div>
       <!-- Fin productos-->
     </div>
-    <!-- Fin sección de productos destacados-->
-
-    <!-- Inicio sección beneficios -->
-    <section class="benefits__container container">
-      <figure class="benefits__img">
-        <img src="../assets/img/img_home.png" alt="Imagen Beneficios">
-      </figure>
-
-      <div class="benefits__text">
-        <h2 class="benefits__title">Impulsa <span class="main__underlined">tu salud y rendimiento</span> eligiendo un estilo de vida activo</h2>
-        <p class="benefits__description">
-          Mejora tu viaje fitness con suplementos de alta calidad y ropa cómoda que te mantiene fresco, sin necesidad de habilidades especiales.
-        </p>
-    
-        <ul class="benefits__list">
-          <li><svg class="icon__check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #004884;transform: msFilter"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg> Beneficios ilimitados para la salud</li>
-          <li><svg class="icon__check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #004884;transform: msFilter"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg> Mejora completamente el bienestar físico y mental</li>
-          <li><svg class="icon__check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #004884;transform: msFilter"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg> Fácil de mantener energía y comodidad con los mejores suplementos y ropa que te hace sentir fresco</li>
-        </ul>
-      </div>
-    </section>
-    <!-- Fin sección beneficios -->
-
-    <!-- Inicio sección Call to Action -->
-    <div class="callToAction">
-      <div class="callToAction__container">
-        <div class="callToAction__filter"></div>
-        <figure class="callToAction__figure">
-          <img src="../assets/img/img_home_call_to_action.jpg" alt="callToAction__banner" class="callToAction__img" />
-        </figure>
-        <div class="callToAction__data">
-          <h2 class="callToAction__title">Lleva tu entrenamiento al siguiente nivel</h2>
-          <p class="callToAction__description">Ropa de gimnasio, máquinas y suplementos de alta calidad.</p>
-          <a href="../pages/productos.html" class="main__cta__2">¡Explora más!</a>
-        </div>
-      </div>
-    </div>
-    <!-- Fin sección Call to Action -->
-
-    <!-- Inicio sección preguntas -->
-    <section class="section">
-
-      <section class="section__questions container">
-        <h2 class="titulo">Preguntas Frecuentes</h2>
-        <div class="categorias" id="categorias">
-          
-          <div class="categoria" data-categoria="entregas">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-80 92L160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11Zm200-528 77-44-237-137-78 45 238 136Zm-160 93 78-45-237-137-78 45 237 137Z"/></svg>
-            <p>Envíos</p>
-            
-          </div>
-          <div class="categoria" data-categoria="seguridad">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg>
-            <p>Métodos de Pago</p>
-          </div>
-        
-        </div>
-    
-        <div class="preguntas">
-          <!-- Preguntas Importancia-->
-          <div class="contenedor-preguntas activo" data-categoria="entregas">
-            <div class="contenedor-pregunta">
-              <p class="pregunta">¿Cuánto tardará en llegar mi pedido?<img src="../assets/iconos/suma.svg" alt="Abrir Respuesta" /></p>
-              <p class="respuesta">Una vez que nuestro almacén termine la preparación de tu pedido recibirás un correo electrónico de confirmación con tu guía de seguimiento. A partir de este momento, Fit Emporium realizará la entrega en la dirección registrada en la orden en un lapso de 4 hasta 7 días hábiles. Importante considerar los siguientes puntos relacionados a tu entrega: <br><br>- Las entregas se realizarán en días hábiles, excepto los días festivos.<br>- El tiempo de entrega comienza desde que recibes tu notificación con la guía de envío de tu orden. <br>- Nuestro socio logístico entregará el paquete al titular de la compra, en caso de que otra persona reciba deberá identificarse con un documento oficial y mencionar el parentesco.
-            </div>
-            <div class="contenedor-pregunta">
-              <p class="pregunta">¿Cómo puedo devolver o cambiar mi producto? <img src="../assets/iconos/suma.svg" alt="Abrir Respuesta" /></p>
-              <p class="respuesta">Debes enviar un correo a contactanos@fitemporium.com con tu número de orden de compra, una foto de la factura de compra indicando el artículo y la nueva talla que deseas para cambio. <br> Nota: La recepción del paquete en nuestra bodega puede tomar hasta 30 días hábiles. Una vez tengamos este ingreso y nos confirmen que está en orden, te contactaremos y procederemos a validar la disponibilidad del producto.</p>
-            </div>
-          </div>
-    
-          <!-- Preguntas Mejoras -->
-          <div class="contenedor-preguntas" data-categoria="seguridad">
-            <div class="contenedor-pregunta">
-              <p class="pregunta">¿Con qué medios de pago puedo realizar mi compra?<img src="../assets/iconos/suma.svg" alt="Abrir Respuesta" /></p>
-              <p class="respuesta">Contamos con Mercado Pago que garantiza la seguridad de nuestros pagos. Dentro de las opciones de pago que te ofrecemos contamos con: pagos con tarjetas de crédito Visa o Mastercard, tarjeta débito con código CSV; PSE, pagos en efectivo desde puntos Efecty y Baloto. Si tienes dinero en tu cuenta de Mercado Pago también podrás usar este monto disponible.</p>
-            </div>
-            <div class="contenedor-pregunta">
-              <p class="pregunta">¿Cómo es el proceso para hacer mi reembolso?<img src="../assets/iconos/suma.svg" alt="Abrir Respuesta" /></p>
-              <p class="respuesta">Una vez que hayamos aprobado tu devolución, se iniciará el proceso de reembolso.<br>1. Método de reembolso: Tu reembolso será efectuado al mismo método de pago de tu compra. <br>2. Tiempo de Reembolso:tu reembolso tomará hasta 7 días corridos para reflejarse en tu cuenta.</p>
-            </div>
-          </div>
-    
-        </div>
-      </section>
-     
-    </section>
-    <!-- Fin sección preguntas -->
-
-    <!-- Inicio Footer Miguel Angel -->
+    <!-- Fin sección de productos-->
 
     <footer class="footer">
       <figure class="footer__figureLogo container">
@@ -1340,9 +1429,7 @@
             </g>
           </g>
           <g fill="#000000" fill-opacity="1">
-            <g transform="translate(161.078297, 150.902232)">
-              <g />
-            </g>
+            <g transform="translate(161.078297, 150.902232)"><g /></g>
           </g>
           <g fill="#000000" fill-opacity="1">
             <g transform="translate(167.881374, 150.902232)">
@@ -1491,11 +1578,11 @@
       </div>
     </footer>
 
-    <!-- Fin Footer Miguel Angel -->
-
     <script src="../js/nav.js" defer></script>
-    <!-- Javascript para funcionamiento de flechas -->
     <script src="../js/filter.js" defer></script>
-    <script src="../js/seccionPreguntas.js" defer></script>
+    <script src="../js/redireccionDetalle.js" defer></script>
+    <script src="../js/otraRedireccion.js" defer></script>
+    <script src="../js/detallesProductoLaura.js" defer></script>
+    <script src="../js/inicioSesion.js" defer></script>
   </body>
 </html>
