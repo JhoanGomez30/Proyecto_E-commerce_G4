@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header class="header">
@@ -351,6 +352,7 @@
                   name="filter"
                   id="lowestPrice"
                   class="lowestPrice"
+                  data-sort="lowestPrice"
                 />
                 <label for="lowestPrice">Precio: más bajo primero</label>
               </li>
@@ -360,6 +362,7 @@
                   name="filter"
                   id="highestPrice"
                   class="highestPrice"
+                  data-sort="highestPrice"
                 />
                 <label for="highestPrice">Precio: más alto primero</label>
               </li>
@@ -369,10 +372,11 @@
                   name="filter"
                   id="inStock"
                   class="inStock"
+                  data-filter="inStock"
                 />
                 <label for="inStock">En inventario</label>
               </li>
-              <li class="filterBar_newProducts">
+              <!-- <li class="filterBar_newProducts">
                 <input
                   type="radio"
                   name="filter"
@@ -380,7 +384,7 @@
                   class="newProducts"
                 />
                 <label for="newProducts">Lo más nuevo</label>
-              </li>
+              </li> -->
             </div>
           </div>
           <div class="filterBar__categories">
@@ -392,8 +396,9 @@
                   name="filter"
                   id="category"
                   class="category"
+                  data-categoria="hombre"
                 />
-                <label for="lowestPrice">Camisetas Hombre</label>
+                <label for="lowestPrice">Hombre</label>
               </li>
               <li class="filterBar_category">
                 <input
@@ -401,8 +406,9 @@
                   name="filter"
                   id="category"
                   class="category"
+                  data-categoria="mujer"
                 />
-                <label for="lowestPrice">Camisetas Mujer</label>
+                <label for="lowestPrice">Mujer</label>
               </li>
               <li class="filterBar_category">
                 <input
@@ -410,8 +416,9 @@
                   name="filter"
                   id="category"
                   class="category"
+                  data-categoria="Suplementos"
                 />
-                <label for="lowestPrice">Crop Tops Mujer</label>
+                <label for="lowestPrice">Suplementos</label>
               </li>
               <li class="filterBar_category">
                 <input
@@ -419,8 +426,9 @@
                   name="filter"
                   id="category"
                   class="category"
+                  data-categoria="calistenia"
                 />
-                <label for="lowestPrice">Esqueletos Hombre</label>
+                <label for="lowestPrice">Calistenia</label>
               </li>
               <li class="filterBar_category">
                 <input
@@ -428,80 +436,9 @@
                   name="filter"
                   id="category"
                   class="category"
+                  data-categoria="maquinas"
                 />
-                <label for="lowestPrice">Esqueletos Mujer</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Hoodies Hombre</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Hoodies Mujer</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Joggers Hombre</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Leggins Mujer</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Shorts Hombre</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Shorts Mujer</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Sudaderas Hombre</label>
-              </li>
-              <li class="filterBar_category">
-                <input
-                  type="radio"
-                  name="filter"
-                  id="category"
-                  class="category"
-                />
-                <label for="lowestPrice">Sudaderas Mujer</label>
+                <label for="lowestPrice">Máquinas de Gimnasio</label>
               </li>
             </div>
           </div>
@@ -517,6 +454,7 @@
               <button class="filterBar__button">XXL</button>
             </div>
           </div>
+          <!-- <button id="logoutBtn">Cerrar sesión</button> -->
         </div>
       </div>
       <!-- Fin barra de filtros-->
@@ -940,6 +878,6 @@
     <script src="../js/nav.js" defer></script>
     <script src="../js/filter.js" defer></script>
     <!-- <script src="../js/redireccionDetalle.js"></script> -->
-    <script src="../js/mostrarProductos.js" type="module"></script>
+    <script src="../js/mostrarProductosLaura.js" type="module"></script>
   </body>
 </html>
