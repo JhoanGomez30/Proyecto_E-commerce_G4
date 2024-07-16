@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet" />
+ <script src="https://sdk.mercadopago.com/js/v2"></script>
 </head>
 
 <body>
@@ -185,7 +186,9 @@
                 <td>$340.000 COP</td>
             </tr>
         </table>
-        <button id="normal" class="normal">Finalizar compra</button>
+        <button id="checkout-btn" class="normal" onclick="finalizarCompra()">Finalizar compra</button>
+        <!-- <div id="wallet_container"></div> aqui se tiene pensado abrir el SDK de mercado pago para el carrito -->
+        <div id="button-checkout"></div>
     </div>
   </section>
   <!-- Fin detalle carrito -->
@@ -400,8 +403,10 @@
 <!-- Fin Footer Miguel Angel -->
 
   <script src="../js/app.js" defer ></script>
+  <script defer src="../js/checkout.js"></script>
+  <script src="../js/mercadopago.js"></script>
   <script src="../js/nav.js" defer ></script>
-  <script src="../js/detallesProducto.js" defer ></script>
+  <!-- <script src="../js/detallesProducto.js" defer ></script> -->
 </body>
 
 </html>

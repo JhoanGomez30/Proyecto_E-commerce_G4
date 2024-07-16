@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       } else {
         // Redirige al registro
-        window.location.href = "registrarse.html";
+        window.location.href = "/pages/registrarse.html";
       }
     });
   }
