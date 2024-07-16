@@ -1,9 +1,9 @@
 // const loginForm = document.querySelector("#loginForm");
 
 // loginForm.addEventListener("submit", (e)=>{
-    
+
 //     e.preventDefault();
-    
+
 //     const formulario = document.getElementById("loginForm");
 //     const email=document.querySelector("#email").value;
 //     const password=document.querySelector("#password").value;
@@ -33,35 +33,35 @@
 
 const loginForm = document.querySelector("#loginForm");
 
-loginForm.addEventListener("submit", (e)=>{
-    
-    e.preventDefault();
-    
-    const formulario = document.getElementById("loginForm");
-    const email=document.querySelector("#email").value;
-    const password=document.querySelector("#password").value;
-    const Users= JSON.parse(localStorage.getItem("users")) || [];
-    const validUser= Users.find(user => user.email === email && user.password === password);
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    if(!validUser){
-        return Swal.fire({
-            title: "Error",
-            text: "Usuario inválido. Por favor, verifica los campos del formulario.",
-            icon: "error",
-            confirmButtonText: "Aceptar",
-        });
-    }
+  const formulario = document.getElementById("loginForm");
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+  const Users = JSON.parse(localStorage.getItem("users")) || [];
+  const validUser = Users.find(
+    (user) => user.email === email && user.password === password
+  );
 
-    localStorage.setItem('loggedInUser', JSON.stringify(validUser));
-
-    Swal.fire({
-        title: "Inicio de sesión",
-        text: "Has iniciado sesión exitosamente.",
-        icon: "success"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.href = "productos.html";
-        }
+  if (!validUser) {
+    return Swal.fire({
+      title: "Error",
+      text: "Usuario inválido. Por favor, verifica los campos del formulario.",
+      icon: "error",
+      confirmButtonText: "Aceptar",
     });
+  }
 
-})
+  localStorage.setItem("loggedInUser", JSON.stringify(validUser));
+
+  Swal.fire({
+    title: "Inicio de sesión",
+    text: "Has iniciado sesión exitosamente.",
+    icon: "success",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "productos.html";
+    }
+  });
+});

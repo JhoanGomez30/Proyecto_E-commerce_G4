@@ -3,7 +3,7 @@ function isAuthenticated() {
   return !!localStorage.getItem("loggedInUser");
 }
 
-// Función para manejar la apertura del carrito
+// Función sí el usuario puede o no agregar al carrito
 function handleCartOpen() {
   if (!isAuthenticated()) {
     return Swal.fire({
@@ -252,3 +252,15 @@ function changePreviousImage(imgContainer) {
   let lastValue = parseInt(cartNotification.innerText) || 0;
   console.log("Valor inicial de lastValue:", lastValue);
 }
+
+// // Función para cerrar sesión
+// function logout() {
+//     // Eliminar el usuario autenticado del localStorage
+//     localStorage.removeItem('loggedInUser');
+
+//     // Redirigir al usuario a la página de inicio de sesión
+//     window.location.href = "inicioSesion.html";
+//   }
+
+//     // Añadir un event listener al botón de cerrar sesión
+//     document.getElementById('logoutBtn').addEventListener('click', logout);
