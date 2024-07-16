@@ -25,7 +25,7 @@ minusBtn.addEventListener("click", ()=>{
 //Agregar el total de productos al carrito de compras cuando se preisona el boton ver compra
 const addCartBtn = document.querySelector(".details__button");
 let cartNotification = document.querySelector(".header__cart--notification");
-let lastValue = parseInt(cartNotification.innerText);
+//let lastValue = parseInt(cartNotification.innerText);
 
 
 
