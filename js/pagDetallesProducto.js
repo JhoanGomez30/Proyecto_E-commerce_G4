@@ -1,6 +1,6 @@
 
 
-export async function insertarInfo(productoCarrito){
+export async function insertarInfo(){
 
     document.addEventListener("DOMContentLoaded", async function(){
         const params = new URLSearchParams(window.location.search);
@@ -32,10 +32,10 @@ export async function insertarInfo(productoCarrito){
           
                 </div>
                 <div class="gallery__thumbnails">
-                  <img id="1" src="../assets/img/thumbnail3-model.webp" alt="thumbnail" class="gallery__thumbnail">
-                  <img id="2" src="../assets/img/thumbnail4-model.webp" alt="thumbnail" class="gallery__thumbnail">
-                  <img id="3" src="../assets/img/thumbnail5-model.webp" alt="thumbnail" class="gallery__thumbnail">
-                  <img id="4" src="../assets/img/thumbnail2-model.webp" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="1" src="${producto.imagen}" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="2" src="${producto.modalimagen1}" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="3" src="${producto.modalimagen2}" alt="thumbnail" class="gallery__thumbnail">
+                  <img id="4" src="${producto.modalimagen3}" alt="thumbnail" class="gallery__thumbnail">
                   
 
                 </div>
@@ -66,7 +66,29 @@ export async function insertarInfo(productoCarrito){
                 <button class="details__button">Agregar al carrito</button>
               </div>
             </article>
-        </div>`
+        </div>
+        
+            <div class="modalGallery__background">
+      <article class="modalGallery">
+        <img src="../assets/iconos/icon-close.svg" alt="close" class="modalGallery__iconClose">
+        <div class="modalGallery__imgContainer">
+          <img src="../assets/iconos/icon-previous.svg" alt="flecha atras" class="modalGallery__previous">
+          <img src="../assets/iconos/icon-next.svg" alt="flecha delante" class="modalGallery__next">
+        </div>
+        <div class="modalGallery__thumbnails">
+          <img id="m1" src="${producto.imagen}" alt="thumbnail" class="modalGallery__thumbnail">
+          <img id="m2" src="${producto.modalimagen1}" alt="thumbnail" class="modalGallery__thumbnail">
+          <img id="m3" src="${producto.modalimagen2}" alt="thumbnail" class="modalGallery__thumbnail">
+          <img id="m4" src="${producto.modalimagen3}" alt="thumbnail" class="modalGallery__thumbnail">
+          
+
+        </div>
+      </article>
+    </div>
+        `
+        
+   
+    // imagenGrande.style.backgroundImage=`${producto.imagen}`
 
         
 
@@ -76,8 +98,9 @@ export async function insertarInfo(productoCarrito){
 const minusBtn= document.querySelector(".input__minus");
 const plusBtn= document.querySelector(".input__plus");
 const countInput= document.querySelector(".input__number");
-
-console.log(minusBtn);
+const imagenGrande= document.querySelector(".gallery__imgContainer");
+console.log(imagenGrande);
+imagenGrande.style.backgroundImage = `url(${producto.imagen})`;
 
 let countInputNumber = 0;
 
@@ -158,11 +181,10 @@ const previousGalleryBtn = document.querySelector(".gallery__previous");
 const nextGalleryBtn = document.querySelector(".gallery__next");
 let imgIndex=1;
 const imageUrls = [
-    "../assets/img/thumbnail1-model.webp",
-    "../assets/img/thumbnail2-model.webp",
-    "../assets/img/thumbnail3-model.webp",
-    "../assets/img/thumbnail4-model.webp",
-    "../assets/img/thumbnail5-model.webp"
+    `url(${producto.imagen})`,
+    `url(${producto.modalimagen1})`,
+    `url(${producto.modalimagen2})`,
+    `url(${producto.modalimagen3})`,
 ]
 
 nextGalleryBtn.addEventListener("click", (e)=>{
@@ -189,6 +211,8 @@ imageContainer.addEventListener("click", ()=>{
 
     imageModal.classList.add("showModal");
     console.log("click, mostrando modal");
+    modalImageContainer.style.backgroundImage = `url(${producto.imagen})`;
+
 })
 
 
@@ -277,8 +301,15 @@ function changeNextImage(imgContainer){
     }else{
         imgIndex++;
     }
-    imgContainer.style.backgroundImage= `url("../assets/img/thumbnail${imgIndex}-model.webp")`;
 
+    // for (let i = 0; i < array.length; i++) {
+    //     imgContainer.style.backgroundImage= imageUrls[i];
+    //     console.log(imageUrls);
+        
+    // }
+    
+    imgContainer.style.backgroundImage = imageUrls[imgIndex - 1];
+    console.log(imageUrls);
     
 
 }
@@ -292,7 +323,8 @@ function changePreviousImage(imgContainer){
 
     }
 
-    imgContainer.style.backgroundImage= `url("../assets/img/thumbnail${imgIndex}-model.webp")`
+    imgContainer.style.backgroundImage = imageUrls[imgIndex - 1];
+
 
 }
 
