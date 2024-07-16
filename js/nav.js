@@ -34,5 +34,5 @@ document.addEventListener("click", function(event) {
 
 iconoUser.addEventListener("click", ()=>{
 
-    window.location.href="registrarse.html";
+    window.location.href="/pages/registrarse.html";
 })
