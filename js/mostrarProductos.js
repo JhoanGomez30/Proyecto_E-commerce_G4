@@ -9,7 +9,7 @@ let listaAPI=[];
 
 
 
-function crearCard(nombre, valorUnitario, imagen, id_producto){
+function crearCard(nombre, valorUnitario, imagen, id_producto, descripcion){
     const producto = document.createElement("div");
     producto.className="cardProduct";
     producto.innerHTML=`       
@@ -27,24 +27,41 @@ function crearCard(nombre, valorUnitario, imagen, id_producto){
   <div class="card__priceAndBuyFlex">
     <p class="card__price">$${valorUnitario}</p>
     <img src="../assets/iconos/shoppingCart.svg" alt="carrito" class="card__buy">
-  </div>`
+  </div> `
 
   const btnSelected=producto.querySelector(".card__buy");
+
+ 
 
   btnSelected.addEventListener("click", async()=>{
     
     console.log("se ha hecho click", id_producto)
-    productosContainer.removeChild(producto);
+    // productosContainer.removeChild(producto);
     
+    const productoCarrito = [nombre, valorUnitario, imagen, id_producto, descripcion]
+    console.log("se ha hecho click", productoCarrito)
+
 
     // await conexionAPI.eliminarProducto(id);
 
-    await conexionAPI.eliminarProducto(id_producto)
+    // await conexionAPI.eliminarProducto(id_producto)
+
+
 
   })
 
+  producto.addEventListener("click", ()=>{
+
+    const productoCarrito = [nombre, valorUnitario, imagen, id_producto, descripcion]
+    seleccionarInfo(productoCarrito);
+
+    window.location.href=`detallesProductos.html?id=${id_producto}`
+  })
+  
   return producto;
 }
+
+
 
 async function listarProductos(){
 
@@ -66,7 +83,7 @@ async function listarProductos(){
 
 function mostrarProductos(listaAPI){
   productosContainer.innerHTML=``;
-  listaAPI.forEach(({nombre, valorUnitario, imagen, id_producto}) => productosContainer.appendChild(crearCard(nombre, valorUnitario, imagen, id_producto)));
+  listaAPI.forEach(({nombre, valorUnitario, imagen, id_producto, descripcion}) => productosContainer.appendChild(crearCard(nombre, valorUnitario, imagen, id_producto, descripcion)));
 }
 
 
@@ -92,7 +109,16 @@ todoBtn.addEventListener("click", ()=>{
   console.log(listaAPI);
 })
 
+export function seleccionarInfo(productoCarrito){
+console.log(productoCarrito);
+
+
+}
+
+
+
 // todosBtn.addEventListener("click", ()=>{
 //   console.log(listaAPI);
 // })
 listarProductos();
+
